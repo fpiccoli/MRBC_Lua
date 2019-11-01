@@ -20,26 +20,20 @@ ghost = {txt='Ghost', pos=pos8, img='174xNSo7Hd1u1OGx06w-MjLop8OFoZdpC', color=r
 golem = {txt='Golem', pos=pos9, img='1h0G2SML1CwdB5yuirIC4u9qMEPsVQhfJ', color=rgb(131, 121, 122), font_color=rgb(255,255,255)}
 hare = {txt='Hare', pos=pos10, img='1C6aN1DjwYbhFNJCWeso51ykOf-QvYMOR', color=rgb(235, 103, 41), font_color=rgb(255,255,255)}
 
--- spawn.deck('Durahan', {0, 0.5, 3}, coin)
--- spawn.deck('Gali', {5, 0.5, 3}, coin)
--- spawn.deck('Ghost', {10, 0.5, 3}, coin)
--- spawn.deck('Golem', {15, 0.5, 3}, coin)
--- spawn.deck('Hare', {20, 0.5, 3}, coin)
+henger = {txt='Henger', pos=pos11 , img='1jz6F3MpeyjnRmR2VEKLxZRI0Gu-PyGm1', color=rgb(175, 136, 52), font_color=rgb(255,255,255)}
+jell = {txt='Jell', pos=pos12, img='1voKcVAlNdZqJcP5nphbTEzBxxCZVOlWe', color=rgb(161, 226, 255), font_color=rgb(0,0,0)}
+joker = {txt='Joker', pos=pos13, img='1MTZY5ehH_Pv_P57hkW39RoM-1OOUIWxG', color=rgb(31, 32, 149), font_color=rgb(255,255,255)}
+metalner = {txt='Metalner', pos=pos14, img='1yQVe9SdtwxZQVFyugrmQ1XosFqEwpX03', color=rgb(222, 233, 234), font_color=rgb(0,0,0)}
+mew = {txt='Mew', pos=pos15, img='1x57wAm-ecI1_TTShOuyVGEyvpOdFbesj', color=rgb(254, 252, 150), font_color=rgb(0,0,0)}
 
--- spawn.deck('Henger', {0, 0.6, 6}, coin)
--- spawn.deck('Jell', {5, 0.6, 6}, coin)
--- spawn.deck('Joker', {10, 0.6, 6}, coin)
--- spawn.deck('Metalner', {15, 0.6, 6}, coin)
--- spawn.deck('Mew', {20, 0.6, 6}, coin)
+mocchi = {txt='Mocchi', pos=pos16 , img='1hYZBGr4Ktu6ZxqBwFwZsxulcnsirYguD', color=rgb(248, 209, 236), font_color=rgb(0,0,0)}
+monol = {txt='Monol', pos=pos17, img='1Dc3gyI3JUwYsSNgklITUdA_vpKJf75HA', color=rgb(1, 1, 1), font_color=rgb(255,255,255)}
+naga = {txt='Naga', pos=pos18, img='1Qs3wcx68okVbXMDVoKoFggT_q0lgW_NN', color=rgb(144, 94, 186), font_color=rgb(255,255,255)}
+phoenix = {txt='Phoenix', pos=pos19, img='1QHVMgYnjMYSOk8iDcyY0Qv7zkCMRK-_7', color=rgb(255, 162, 37), font_color=rgb(0,0,0)}
+pixie = {txt='Pixie', pos=pos20, img='1NODOD2WsvKJ4vHZwTGOJuPdgxAV6RKCx', color=rgb(252, 45, 13), font_color=rgb(255,255,255)}
 
--- spawn.deck('Mocchi', {0, 0.6, 9}, coin)
--- spawn.deck('Monol', {5, 0.6, 9}, coin)
--- spawn.deck('Naga', {10, 0.6, 9}, coin)
--- spawn.deck('Phoenix', {15, 0.6, 9}, coin)
--- spawn.deck('Pixie', {20, 0.6, 9}, coin)
-
--- spawn.deck('Plant', {0, 0.6, 12}, coin)
--- spawn.deck('Suezo', {5, 0.6, 12}, coin)
--- spawn.deck('Tiger', {10, 0.6, 12}, coin)
--- spawn.deck('Worm', {15, 0.6, 12}, coin)
--- spawn.deck('Zilla', {20, 0.6, 12}, coin)
+plant = {txt='Plant', pos=pos21 , img='1uLXLvxeOPiWa3gtLmpvyW6KJ_qbC1uKc', color=rgb(33, 166, 66), font_color=rgb(255,255,255)}
+suezo = {txt='Suezo', pos=pos22, img='1Dv0Iamb4AKargbV6ma9HC9h2EO4kW5cP', color=rgb(250, 235, 31), font_color=rgb(0,0,0)}
+tiger = {txt='Tiger', pos=pos23, img='11L8Uau7ad7vO7Cib2ogJs2nVM8hBta6Z', color=rgb(4, 129, 209), font_color=rgb(255,255,255)}
+worm = {txt='Worm', pos=pos24, img='1wIV6km1ilR02rJ_zMJ8_o2Zc3sIw5U3m', color=rgb(195, 122, 67), font_color=rgb(255,255,255)}
+zilla = {txt='Zilla', pos=pos25, img='1ECet8rCZmBhmpsgf_sg93Gn5niXLdx5c', color=rgb(6, 55, 96), font_color=rgb(255,255,255)}

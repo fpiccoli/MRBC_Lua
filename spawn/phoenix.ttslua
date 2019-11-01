@@ -1,0 +1,8 @@
+
+function spawn.phoenix(coin)
+  monster(phoenix, coin, 'phoenixdeck')
+end
+
+function phoenixdeck(obj, color, alt)
+  spawnDeck(phoenix.img, alt)
+end

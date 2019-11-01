@@ -1,0 +1,8 @@
+
+function spawn.tiger(coin)
+  monster(tiger, coin, 'tigerdeck')
+end
+
+function tigerdeck(obj, color, alt)
+  spawnDeck(tiger.img, alt)
+end

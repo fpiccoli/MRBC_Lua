@@ -1,0 +1,8 @@
+
+function spawn.metalner(coin)
+  monster(metalner, coin, 'metalnerdeck')
+end
+
+function metalnerdeck(obj, color, alt)
+  spawnDeck(metalner.img, alt)
+end

@@ -1,0 +1,8 @@
+
+function spawn.naga(coin)
+  monster(naga, coin, 'nagadeck')
+end
+
+function nagadeck(obj, color, alt)
+  spawnDeck(naga.img, alt)
+end

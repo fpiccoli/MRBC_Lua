@@ -1,0 +1,8 @@
+
+function spawn.mew(coin)
+  monster(mew, coin, 'mewdeck')
+end
+
+function mewdeck(obj, color, alt)
+  spawnDeck(mew.img, alt)
+end

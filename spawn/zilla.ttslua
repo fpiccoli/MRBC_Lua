@@ -1,0 +1,8 @@
+
+function spawn.zilla(coin)
+  monster(zilla, coin, 'zilladeck')
+end
+
+function zilladeck(obj, color, alt)
+  spawnDeck(zilla.img, alt)
+end

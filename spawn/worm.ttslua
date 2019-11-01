@@ -1,0 +1,8 @@
+
+function spawn.worm(coin)
+  monster(worm, coin, 'wormdeck')
+end
+
+function wormdeck(obj, color, alt)
+  spawnDeck(worm.img, alt)
+end

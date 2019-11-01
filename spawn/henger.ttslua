@@ -1,0 +1,8 @@
+
+function spawn.henger(coin)
+  monster(henger, coin, 'hengerdeck')
+end
+
+function hengerdeck(obj, color, alt)
+  spawnDeck(henger.img, alt)
+end

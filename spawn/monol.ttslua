@@ -1,0 +1,8 @@
+
+function spawn.monol(coin)
+  monster(monol, coin, 'monoldeck')
+end
+
+function monoldeck(obj, color, alt)
+  spawnDeck(monol.img, alt)
+end

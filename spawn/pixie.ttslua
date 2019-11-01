@@ -1,0 +1,8 @@
+
+function spawn.pixie(coin)
+  monster(pixie, coin, 'pixiedeck')
+end
+
+function pixiedeck(obj, color, alt)
+  spawnDeck(pixie.img, alt)
+end

@@ -1,0 +1,8 @@
+
+function spawn.joker(coin)
+  monster(joker, coin, 'jokerdeck')
+end
+
+function jokerdeck(obj, color, alt)
+  spawnDeck(joker.img, alt)
+end

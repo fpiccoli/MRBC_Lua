@@ -1,0 +1,8 @@
+
+function spawn.suezo(coin)
+  monster(suezo, coin, 'suezodeck')
+end
+
+function suezodeck(obj, color, alt)
+  spawnDeck(suezo.img, alt)
+end

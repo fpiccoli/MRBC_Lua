@@ -1,0 +1,8 @@
+
+function spawn.mocchi(coin)
+  monster(mocchi, coin, 'mocchideck')
+end
+
+function mocchideck(obj, color, alt)
+  spawnDeck(mocchi.img, alt)
+end

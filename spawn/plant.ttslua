@@ -1,0 +1,8 @@
+
+function spawn.plant(coin)
+  monster(plant, coin, 'plantdeck')
+end
+
+function plantdeck(obj, color, alt)
+  spawnDeck(plant.img, alt)
+end

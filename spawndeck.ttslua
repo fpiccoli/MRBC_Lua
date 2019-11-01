@@ -14,4 +14,22 @@ spawn = {}
 #include spawn/golem
 #include spawn/hare
 
+#include spawn/henger
+#include spawn/jell
+#include spawn/joker
+#include spawn/metalner
+#include spawn/mew
+
+#include spawn/mocchi
+#include spawn/monol
+#include spawn/naga
+#include spawn/phoenix
+#include spawn/pixie
+
+#include spawn/plant
+#include spawn/suezo
+#include spawn/tiger
+#include spawn/worm
+#include spawn/zilla
+
 #include spawn

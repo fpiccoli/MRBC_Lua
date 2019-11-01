@@ -1,0 +1,8 @@
+
+function spawn.jell(coin)
+  monster(jell, coin, 'jelldeck')
+end
+
+function jelldeck(obj, color, alt)
+  spawnDeck(jell.img, alt)
+end

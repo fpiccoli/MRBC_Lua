@@ -24,23 +24,23 @@ function onLoad()
  spawn.golem(coin)
  spawn.hare(coin)
 
- -- spawn.deck('Henger', {0, 0.6, 6}, coin)
- -- spawn.deck('Jell', {5, 0.6, 6}, coin)
- -- spawn.deck('Joker', {10, 0.6, 6}, coin)
- -- spawn.deck('Metalner', {15, 0.6, 6}, coin)
- -- spawn.deck('Mew', {20, 0.6, 6}, coin)
- --
- -- spawn.deck('Mocchi', {0, 0.6, 9}, coin)
- -- spawn.deck('Monol', {5, 0.6, 9}, coin)
- -- spawn.deck('Naga', {10, 0.6, 9}, coin)
- -- spawn.deck('Phoenix', {15, 0.6, 9}, coin)
- -- spawn.deck('Pixie', {20, 0.6, 9}, coin)
- --
- -- spawn.deck('Plant', {0, 0.6, 12}, coin)
- -- spawn.deck('Suezo', {5, 0.6, 12}, coin)
- -- spawn.deck('Tiger', {10, 0.6, 12}, coin)
- -- spawn.deck('Worm', {15, 0.6, 12}, coin)
- -- spawn.deck('Zilla', {20, 0.6, 12}, coin)
+ spawn.henger(coin)
+ spawn.jell(coin)
+ spawn.joker(coin)
+ spawn.metalner(coin)
+ spawn.mew(coin)
+
+ spawn.mocchi(coin)
+ spawn.monol(coin)
+ spawn.naga(coin)
+ spawn.phoenix(coin)
+ spawn.pixie(coin)
+
+ spawn.plant(coin)
+ spawn.suezo(coin)
+ spawn.tiger(coin)
+ spawn.worm(coin)
+ spawn.zilla(coin)
 end
 
 --[[ The onUpdate event is called once per frame. --]]
