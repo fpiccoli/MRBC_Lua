@@ -1,0 +1,49 @@
+--[[ Lua code. See documentation: https://api.tabletopsimulator.com/ --]]
+#include MRBC_Lua/spawndeck
+
+--[[ The onLoad event is called after the game save finishes loading. --]]
+function onLoad()
+ local coinparams = {
+   type      = 'Checker_black',
+   position  = {-82, 0.6, 30},
+   rotation  = {0.00, 180.00, 0.00},
+   lock      = true
+ }
+ coin = spawnObject(coinparams)
+ coin.setLock(true)
+
+ spawn.arrowhead(coin)
+ spawn.centaur(coin)
+ spawn.colorpandora(coin)
+ spawn.dino(coin)
+ spawn.dragon(coin)
+
+ spawn.durahan(coin)
+ spawn.gali(coin)
+ spawn.ghost(coin)
+ spawn.golem(coin)
+ spawn.hare(coin)
+
+ -- spawn.deck('Henger', {0, 0.6, 6}, coin)
+ -- spawn.deck('Jell', {5, 0.6, 6}, coin)
+ -- spawn.deck('Joker', {10, 0.6, 6}, coin)
+ -- spawn.deck('Metalner', {15, 0.6, 6}, coin)
+ -- spawn.deck('Mew', {20, 0.6, 6}, coin)
+ --
+ -- spawn.deck('Mocchi', {0, 0.6, 9}, coin)
+ -- spawn.deck('Monol', {5, 0.6, 9}, coin)
+ -- spawn.deck('Naga', {10, 0.6, 9}, coin)
+ -- spawn.deck('Phoenix', {15, 0.6, 9}, coin)
+ -- spawn.deck('Pixie', {20, 0.6, 9}, coin)
+ --
+ -- spawn.deck('Plant', {0, 0.6, 12}, coin)
+ -- spawn.deck('Suezo', {5, 0.6, 12}, coin)
+ -- spawn.deck('Tiger', {10, 0.6, 12}, coin)
+ -- spawn.deck('Worm', {15, 0.6, 12}, coin)
+ -- spawn.deck('Zilla', {20, 0.6, 12}, coin)
+end
+
+--[[ The onUpdate event is called once per frame. --]]
+function onUpdate()
+ --[[ print('onUpdate loop!') --]]
+end

@@ -1,0 +1,8 @@
+
+function spawn.hare(coin)
+  monster(hare, coin, 'haredeck')
+end
+
+function haredeck(obj, color, alt)
+  spawnDeck(hare.img, alt)
+end

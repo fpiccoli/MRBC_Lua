@@ -1,8 +1,24 @@
-arrowhead = {txt='Arrow\nHead', pos={0, 0.5, 0}, img='1hKrE8dN4aEIMn8zBsxD8BQlO0yw7Nm2r'}
-centaur = {txt='Centaur', pos={5, 0.5, 0}, img='1FkJh77UbfI-FDCj_bOic2q142riavjf3'}
-colorpandora = {txt='Color \nPandora', pos={10, 0.5, 0}, img='1UzskHLV2H2aU6g2U5hIc-Lmmy6NkkS06'}
-dino = {txt='Dino', pos={15, 0.6, 0}, img='13Qjutj4yfMwAA8QagdWXSsMUjn7ZpbIW'}
-dragon = {txt='Dragon', pos={20, 0.6, 0}, img='1A5OuPd4ZIKScpm2hg6j2oCdCPV-P3Pj_'}
+pos1 = {0, 0.5, 0};pos2 = {5, 0.5, 0};pos3 = {10, 0.5, 0};pos4 = {15, 0.5, 0};pos5 = {20, 0.5, 0};
+pos6 = {0, 0.5, 3};pos7 = {5, 0.5, 3};pos8 = {10, 0.5, 3};pos9 = {15, 0.5, 3};pos10 = {20, 0.5, 3};
+pos11 = {0, 0.5, 6};pos12 = {5, 0.5, 6};pos13 = {10, 0.5, 6};pos14 = {15, 0.5, 6};pos15 = {20, 0.5, 6};
+pos16 = {0, 0.5, 9};pos17 = {5, 0.5, 9};pos18 = {10, 0.5, 9};pos19 = {15, 0.5, 9};pos20 = {20, 0.5, 9};
+pos21 = {0, 0.5, 12};pos22 = {5, 0.5, 12};pos23 = {10, 0.5, 12};pos24 = {15, 0.5, 12};pos25 = {20, 0.5, 12}
+
+function rgb(red, green, blue)
+  return {r=red/255, g=green/255, b=blue/255}
+end
+
+arrowhead = {txt='Arrow\nHead', pos=pos1 , img='1hKrE8dN4aEIMn8zBsxD8BQlO0yw7Nm2r', color=rgb(252,68,69), font_color=rgb(255,255,255)}
+centaur = {txt='Centaur', pos=pos2, img='1FkJh77UbfI-FDCj_bOic2q142riavjf3', color=rgb(2, 197, 135), font_color=rgb(255,255,255)}
+colorpandora = {txt='Color \nPandora', pos=pos3, img='1UzskHLV2H2aU6g2U5hIc-Lmmy6NkkS06', color=rgb(193, 232, 39), font_color=rgb(0,0,0)}
+dino = {txt='Dino', pos=pos4, img='13Qjutj4yfMwAA8QagdWXSsMUjn7ZpbIW', color=rgb(82, 207, 72), font_color=rgb(0,0,0)}
+dragon = {txt='Dragon', pos=pos5, img='1A5OuPd4ZIKScpm2hg6j2oCdCPV-P3Pj_', color=rgb(216, 49, 41), font_color=rgb(255,255,255)}
+
+durahan = {txt='Durahan', pos=pos6 , img='1xVj1MsjaJVZbeSq98YTOlji5Z0Ne6sx_', color=rgb(190, 179, 202), font_color=rgb(255,255,255)}
+gali = {txt='Gali', pos=pos7, img='1-IpzGFI4Je2-8Vefbfz87n3xCt-QKRnX', color=rgb(238, 198, 75), font_color=rgb(0,0,0)}
+ghost = {txt='Ghost', pos=pos8, img='174xNSo7Hd1u1OGx06w-MjLop8OFoZdpC', color=rgb(248, 239, 171), font_color=rgb(0,0,0)}
+golem = {txt='Golem', pos=pos9, img='1h0G2SML1CwdB5yuirIC4u9qMEPsVQhfJ', color=rgb(131, 121, 122), font_color=rgb(255,255,255)}
+hare = {txt='Hare', pos=pos10, img='1C6aN1DjwYbhFNJCWeso51ykOf-QvYMOR', color=rgb(235, 103, 41), font_color=rgb(255,255,255)}
 
 -- spawn.deck('Durahan', {0, 0.5, 3}, coin)
 -- spawn.deck('Gali', {5, 0.5, 3}, coin)

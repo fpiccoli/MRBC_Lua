@@ -8,6 +8,8 @@ function monster(obj, coin, deck)
   drawButton.width          = 1600
   drawButton.height         = 1000
   drawButton.font_size      = 400
+  drawButton.color          = obj.color
+  drawButton.font_color     = obj.font_color
 
   coin.createButton(drawButton)
 end
@@ -20,7 +22,7 @@ function spawnDeck(imgurl, alt) --pregen deck
   end
   spawnparams = {
     type      = 'DeckCustom',
-    position  = {value, 1, 13},
+    position  = {value, 5, 13},
     rotation  = {0,180,0},
     scale     = {1.5,1,1.5}
   }

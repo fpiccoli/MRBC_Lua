@@ -1,0 +1,8 @@
+
+function spawn.durahan(coin)
+  monster(durahan, coin, 'durahandeck')
+end
+
+function durahandeck(obj, color, alt)
+  spawnDeck(durahan.img, alt)
+end

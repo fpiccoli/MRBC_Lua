@@ -1,0 +1,8 @@
+
+function spawn.dragon(coin)
+  monster(dragon, coin, 'dragondeck')
+end
+
+function dragondeck(obj, color, alt)
+  spawnDeck(dragon.img, alt)
+end

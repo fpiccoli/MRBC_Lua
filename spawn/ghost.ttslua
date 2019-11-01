@@ -1,0 +1,8 @@
+
+function spawn.ghost(coin)
+  monster(ghost, coin, 'ghostdeck')
+end
+
+function ghostdeck(obj, color, alt)
+  spawnDeck(ghost.img, alt)
+end

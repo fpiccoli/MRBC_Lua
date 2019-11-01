@@ -1,0 +1,8 @@
+
+function spawn.gali(coin)
+  monster(gali, coin, 'galideck')
+end
+
+function galideck(obj, color, alt)
+  spawnDeck(gali.img, alt)
+end

@@ -1,0 +1,8 @@
+
+function spawn.golem(coin)
+  monster(golem, coin, 'golemdeck')
+end
+
+function golemdeck(obj, color, alt)
+  spawnDeck(golem.img, alt)
+end

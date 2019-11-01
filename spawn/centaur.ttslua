@@ -1,0 +1,8 @@
+
+function spawn.centaur(coin)
+  monster(centaur, coin, 'centaurdeck')
+end
+
+function centaurdeck(obj, color, alt)
+  spawnDeck(centaur.img, alt)
+end

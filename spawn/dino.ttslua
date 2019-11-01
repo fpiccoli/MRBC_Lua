@@ -1,0 +1,8 @@
+
+function spawn.dino(coin)
+  monster(dino, coin, 'dinodeck')
+end
+
+function dinodeck(obj, color, alt)
+  spawnDeck(dino.img, alt)
+end

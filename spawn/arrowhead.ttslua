@@ -1,0 +1,8 @@
+
+function spawn.arrowhead(coin)
+  monster(arrowhead, coin, 'arrowheaddeck')
+end
+
+function arrowheaddeck(obj, color, alt)
+  spawnDeck(arrowhead.img, alt)
+end
