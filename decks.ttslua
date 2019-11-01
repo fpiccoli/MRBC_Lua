@@ -1,0 +1,29 @@
+arrowhead = {txt='Arrow\nHead', pos={0, 0.5, 0}, img='1hKrE8dN4aEIMn8zBsxD8BQlO0yw7Nm2r'}
+centaur = {txt='Centaur', pos={5, 0.5, 0}, img='1FkJh77UbfI-FDCj_bOic2q142riavjf3'}
+colorpandora = {txt='Color \nPandora', pos={10, 0.5, 0}, img='1UzskHLV2H2aU6g2U5hIc-Lmmy6NkkS06'}
+dino = {txt='Dino', pos={15, 0.6, 0}, img='13Qjutj4yfMwAA8QagdWXSsMUjn7ZpbIW'}
+dragon = {txt='Dragon', pos={20, 0.6, 0}, img='1A5OuPd4ZIKScpm2hg6j2oCdCPV-P3Pj_'}
+
+-- spawn.deck('Durahan', {0, 0.5, 3}, coin)
+-- spawn.deck('Gali', {5, 0.5, 3}, coin)
+-- spawn.deck('Ghost', {10, 0.5, 3}, coin)
+-- spawn.deck('Golem', {15, 0.5, 3}, coin)
+-- spawn.deck('Hare', {20, 0.5, 3}, coin)
+
+-- spawn.deck('Henger', {0, 0.6, 6}, coin)
+-- spawn.deck('Jell', {5, 0.6, 6}, coin)
+-- spawn.deck('Joker', {10, 0.6, 6}, coin)
+-- spawn.deck('Metalner', {15, 0.6, 6}, coin)
+-- spawn.deck('Mew', {20, 0.6, 6}, coin)
+
+-- spawn.deck('Mocchi', {0, 0.6, 9}, coin)
+-- spawn.deck('Monol', {5, 0.6, 9}, coin)
+-- spawn.deck('Naga', {10, 0.6, 9}, coin)
+-- spawn.deck('Phoenix', {15, 0.6, 9}, coin)
+-- spawn.deck('Pixie', {20, 0.6, 9}, coin)
+
+-- spawn.deck('Plant', {0, 0.6, 12}, coin)
+-- spawn.deck('Suezo', {5, 0.6, 12}, coin)
+-- spawn.deck('Tiger', {10, 0.6, 12}, coin)
+-- spawn.deck('Worm', {15, 0.6, 12}, coin)
+-- spawn.deck('Zilla', {20, 0.6, 12}, coin)

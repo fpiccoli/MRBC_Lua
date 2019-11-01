@@ -1,0 +1,110 @@
+deckZoneGUID = '907d92'
+apZoneGUID = 'c31619'
+tokenGUID = 'e450ce'
+color = 'Orange'
+enemyColor = 'Pink'
+
+playerRGB = {r=0.956, g=0.392, b=0.113}
+enemyPlayerRGB = {r=0.96, g=0.439, b=0.807}
+playerHandPosition = {x=-29.20, y=1.04, z=-25.47}
+apZonePosition = {x=-29.20, y=2.10, z=-16.00}
+
+drawButtonPosition = {8.5, 0.8, -5}
+turnButtonPosition = {0, 0.8, -5}
+
+
+function onLoad ()
+    local token = getObjectFromGUID(tokenGUID)
+
+    local drawButton = {}
+    drawButton.click_function = 'drawCard'
+    drawButton.label = 'Draw'
+    drawButton.function_owner = token
+    drawButton.position = {8.5, 0.8, -5}
+    drawButton.rotation = {0, 0, 0}
+    drawButton.width = 1400
+    drawButton.height = 1200
+    drawButton.font_size = 400
+
+    token.createButton(drawButton)
+
+    local turnButton = {}
+    drawButton.click_function = 'turnCards'
+    drawButton.label = 'Turn'
+    drawButton.function_owner = token
+    drawButton.position = {0, 0.8, -5}
+    drawButton.rotation = {0, 0, 0}
+    drawButton.width = 1400
+    drawButton.height = 1200
+    drawButton.font_size = 400
+
+    token.createButton(drawButton)
+end
+
+function drawCard ()
+    if not Player[color].seated then
+        broadcastToAll('Player ' .. color .. ' is not seated at the table!', playerRGB)
+        return
+    end
+
+    local deck = getObjectFromGUID(deckZoneGUID).getObjects()[1]
+
+	if deck == nil then
+        broadcastToColor('Put your deck on the deck zone!', color, playerRGB)
+        return
+    end
+
+    local playerHand = Player[color].getHandObjects()
+
+    local counter = 0
+    for index in pairs(playerHand) do
+        counter = counter + 1
+    end
+
+	if counter >= 5 then
+        broadcastToColor('You already have 5 cards!', color, playerRGB)
+		return
+	end
+
+	local numberOfCards = 5 - counter
+
+	broadcastToAll(Player[color].steam_name .. ' drew ' .. numberOfCards .. ' card(s).', playerRGB)
+
+	params = {cards = deck}
+	Timer.create({
+        identifier     = 'darCartas',
+        function_name  = 'drawOneCardByTime',
+        parameters     = params,
+        delay          = 0.25,
+        repetitions    = numberOfCards,
+    })
+
+end
+
+function drawOneCardByTime(deck)
+    deck.cards.deal(1, color)
+end
+
+function turnCards ()
+    if not Player[color].seated then
+        broadcastToAll('Player ' .. color .. ' is not seated at the table!', playerRGB)
+        return
+    end
+
+    local playerHand = Player[color].getHandObjects()
+
+    local counter = 0
+    for index in pairs(playerHand) do
+		if playerHand[index].getRotation().z == 180 then
+			counter = counter + 1
+			playerHand[index].setPosition(playerHandPosition)
+			playerHand[index].setPositionSmooth(apZonePosition)
+		end
+	end
+
+	if Player[enemyColor].seated then
+		broadcastToColor('YOUR TURN', enemyColor, enemyPlayerRGB)
+    end
+	broadcastToAll(Player[color].steam_name .. ' turned ' .. counter .. ' AP', playerRGB)
+
+end

@@ -1,0 +1,45 @@
+spawn = {}
+
+#include decks
+
+function spawn.arrowhead(coin)
+  monster(arrowhead, coin, 'arrowheaddeck')
+end
+
+function arrowheaddeck(obj, color, alt)
+  spawnDeck(arrowhead.img, alt)
+end
+
+function spawn.centaur(coin)
+  monster(centaur, coin, 'centaurdeck')
+end
+
+function centaurdeck(obj, color, alt)
+  spawnDeck(centaur.img, alt)
+end
+
+function spawn.colorpandora(coin)
+  monster(colorpandora, coin, 'colorpandoradeck')
+end
+
+function colorpandoradeck(obj, color, alt)
+  spawnDeck(colorpandora.img, alt)
+end
+
+function spawn.dino(coin)
+  monster(dino, coin, 'dinodeck')
+end
+
+function dinodeck(obj, color, alt)
+  spawnDeck(dino.img, alt)
+end
+
+function spawn.dragon(coin)
+  monster(dragon, coin, 'dragondeck')
+end
+
+function dragondeck(obj, color, alt)
+  spawnDeck(dragon.img, alt)
+end
+
+#include spawn

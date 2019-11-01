@@ -1,0 +1,37 @@
+
+function monster(obj, coin, deck)
+  local drawButton = {}
+  drawButton.click_function = deck
+  drawButton.label          = obj.txt
+  drawButton.function_owner = self
+  drawButton.position       = obj.pos
+  drawButton.width          = 1600
+  drawButton.height         = 1000
+  drawButton.font_size      = 400
+
+  coin.createButton(drawButton)
+end
+
+function spawnDeck(imgurl, alt) --pregen deck
+  --local pos = token.getPosition()a
+  value = -82
+  if alt then
+    value = -62
+  end
+  spawnparams = {
+    type      = 'DeckCustom',
+    position  = {value, 1, 13},
+    rotation  = {0,180,0},
+    scale     = {1.5,1,1.5}
+  }
+  object = spawnObject(spawnparams)
+  params = {
+    face        = "https://drive.google.com/uc?export=download&id="..imgurl,
+    unique_back = false,
+    back        = "https://drive.google.com/uc?export=download&id=1UKrGHayxga-bEIvMHSEDG4HRJJe6rL2c",
+    width       = 5,
+    height      = 4,
+    number      = 17,
+  }
+  object.setCustomObject(params)
+end
