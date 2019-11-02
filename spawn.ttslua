@@ -14,8 +14,7 @@ function monster(obj, coin, deck)
   coin.createButton(drawButton)
 end
 
-function spawnDeck(imgurl, alt) --pregen deck
-  --local pos = token.getPosition()a
+function spawnDeck(imgurl, alt)
   value = -82
   if alt then
     value = -62
