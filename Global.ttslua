@@ -52,19 +52,19 @@ function onLoad()
   btn = spawnObject(btnparams)
   btn.setLock(true)
 
-  -- draw.orange(btn)
-  -- draw.pink(btn)
-  -- draw.yellow(btn)
-  -- draw.green(btn)
+  draw.orange(btn)
+  draw.pink(btn)
+  draw.yellow(btn)
+  draw.green(btn)
   draw.blue(btn)
-  -- draw.red(btn)
-  --
-  -- turn.orange(btn)
-  -- turn.pink(btn)
-  -- turn.yellow(btn)
-  -- turn.green(btn)
+  draw.red(btn)
+
+  turn.orange(btn)
+  turn.pink(btn)
+  turn.yellow(btn)
+  turn.green(btn)
   turn.blue(btn)
-  -- turn.red(btn)
+  turn.red(btn)
 end
 
 --[[ The onUpdate event is called once per frame. --]]

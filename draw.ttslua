@@ -4,7 +4,7 @@ function drawBtn(obj, btn, func)
   drawButton.label = 'Draw'
   drawButton.function_owner = self
   drawButton.position = obj.drawButtonPosition
-  drawButton.rotation = {0, 0, 0}
+  drawButton.rotation = obj.btnRotation
   drawButton.width = 1400
   drawButton.height = 1200
   drawButton.font_size = 400

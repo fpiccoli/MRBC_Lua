@@ -5,7 +5,7 @@ function turnBtn(obj, btn, func)
   turnButton.label = 'Turn'
   turnButton.function_owner = self
   turnButton.position = obj.turnButtonPosition
-  turnButton.rotation = {0, 0, 0}
+  turnButton.rotation = obj.btnRotation
   turnButton.width = 1400
   turnButton.height = 1200
   turnButton.font_size = 400

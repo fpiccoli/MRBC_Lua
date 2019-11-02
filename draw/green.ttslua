@@ -1,59 +1,8 @@
-draw = {}
 
-function draw.card(btn)
-  local drawButton = {}
-  drawButton.click_function = 'drawCard'
-  drawButton.label = 'Draw'
-  drawButton.function_owner = btn
-  drawButton.position = {8.5, 0.8, -5}
-  drawButton.rotation = {0, 0, 0}
-  drawButton.width = 1400
-  drawButton.height = 1200
-  drawButton.font_size = 400
-
-  btn.createButton(drawButton)
+function draw.green(btn)
+  drawBtn(green, btn, 'greendraw')
 end
 
-function drawCard()
-  if not Player[color].seated then
-    broadcastToAll('Player ' .. color .. ' is not seated at the table!', playerRGB)
-    return
-  end
-
-  local deck = getObjectFromGUID(deckZoneGUID).getObjects()[1]
-
-  if deck == nil then
-    broadcastToColor('Put your deck on the deck zone!', color, playerRGB)
-    return
-  end
-
-  local playerHand = Player[color].getHandObjects()
-
-  local counter = 0
-  for index in pairs(playerHand) do
-    counter = counter + 1
-  end
-
-  if counter >= 5 then
-    broadcastToColor('You already have 5 cards!', color, playerRGB)
-    return
-  end
-
-  local numberOfCards = 5 - counter
-
-  broadcastToAll(Player[color].steam_name .. ' drew ' .. numberOfCards .. ' card(s).', playerRGB)
-
-  params = {cards = deck}
-  Timer.create({
-    identifier     = 'darCartas',
-    function_name  = 'drawOneCardByTime',
-    parameters     = params,
-    delay          = 0.25,
-    repetitions    = numberOfCards,
-  })
-
-end
-
-function drawOneCardByTime(deck)
-  deck.cards.deal(1, color)
+function greendraw(obj, color, alt)
+  drawCard(green, color, alt)
 end

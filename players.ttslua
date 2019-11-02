@@ -2,30 +2,30 @@
 orange = {
   deckZoneGUID = '907d92', apZoneGUID = 'c31619', color = 'Orange', enemy = 'Pink',
   playerRGB = {r=0.956, g=0.392, b=0.113}, enemyRGB = {r=0.96, g=0.439, b=0.807}, playerHandPosition = {x=-29.20, y=1.04, z=-25.47}, apZonePosition = {x=-29.20, y=2.10, z=-16.00},
-  drawButtonPosition = {8.5, 0.8, -5}, turnButtonPosition = {0, 0.8, -5},
+  drawButtonPosition = {-20.66, 1.00, 16.00}, turnButtonPosition = {-29.18, 1.00, 16.00}, btnRotation={0,0,0}
 }
 pink = {
   deckZoneGUID = '7e1516', apZoneGUID = '4c6bd6', color = 'Pink', enemy = 'Orange',
   playerRGB = {r=0.96, g=0.439, b=0.807}, enemyRGB = {r=0.956, g=0.392, b=0.113}, playerHandPosition = {x=-29.20, y=1.04, z=25.47}, apZonePosition = {x=-29.20, y=2.10, z=16.00},
-  drawButtonPosition = {8.5, 0.8, -5}, turnButtonPosition = {0, 0.8, -5}
+  drawButtonPosition = {-37.75, 1.00, -16.00}, turnButtonPosition = {-29.20, 1.00, -16.00}, btnRotation={0,180,0}
 }
 yellow = {
   deckZoneGUID = 'ce16a7', apZoneGUID = 'c4ee22', color = 'Yellow', enemy = 'Green',
   playerRGB = {r=0.905, g=0.898, b=0.172}, enemyRGB = {r=0.192, g=0.701, b=0.168}, playerHandPosition = {x=0.19, y=1.04, z=-25.47}, apZonePosition = {x=0.26, y=2.10, z=-16.00},
-  drawButtonPosition = {8.5, 0.8, -5}, turnButtonPosition = {0, 0.8, -5}
+  drawButtonPosition = {8.89, 1.00, 16.00}, turnButtonPosition = {0.27, 1.00, 16.00}, btnRotation={0,0,0}
 }
 green = {
   deckZoneGUID = 'fc239f', apZoneGUID = '2feed3', color = 'Green', enemy = 'Yellow',
   playerRGB = {r=0.192, g=0.701, b=0.168}, enemyRGB = {r=0.905, g=0.898, b=0.172}, playerHandPosition = {x=0.21, y=1.04, z=25.47}, apZonePosition = {x=0.21, y=2.10, z=16.00},
-  drawButtonPosition = {8.5, 0.8, -5}, turnButtonPosition = {0, 0.8, -5}
+  drawButtonPosition = {-8.25, 1.00, -16.00}, turnButtonPosition = {0.21, 1.00, -16.00}, btnRotation={0,180,0}
 }
 blue = {
   deckZoneGUID = 'bccb49', apZoneGUID = 'ea062a', color = 'Blue', enemy = 'Red',
   playerRGB = {r=0.118, g=0.53, b=1}, enemyRGB = {r=0.856, g=0.1, b=0.094}, playerHandPosition = {x=29, y=1.04, z=-25.47}, apZonePosition = {x=29, y=2.10, z=-16.00},
-  drawButtonPosition = {37.63, 1.00, 16.00}, turnButtonPosition = {29.06, 1.00, 16.00}
+  drawButtonPosition = {37.63, 1.00, 16.00}, turnButtonPosition = {29.06, 1.00, 16.00}, btnRotation={0,0,0}
 }
-playerRed = {
+red = {
   deckZoneGUID = '471a1d', apZoneGUID = '7b0450', color = 'Red', enemy = 'Blue',
   playerRGB = {r=0.856, g=0.1, b=0.094}, enemyRGB = {r=0.118, g=0.53, b=1}, playerHandPosition = {x=29, y=1.04, z=25.47}, apZonePosition = {x=29, y=2.10, z=16.00},
-  drawButtonPosition = {8.5, 0.8, -5}, turnButtonPosition = {0, 0.8, -5}
+  drawButtonPosition = {20.52, 1.00, -16.00}, turnButtonPosition = {29.08, 1.00, -16.00}, btnRotation={0,180,0}
 }
