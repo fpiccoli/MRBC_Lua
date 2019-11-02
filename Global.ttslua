@@ -13,35 +13,12 @@ function onLoad()
   coin = spawnObject(coinparams)
   coin.setLock(true)
 
-  spawn.arrowhead(coin)
-  spawn.centaur(coin)
-  spawn.colorpandora(coin)
-  spawn.dino(coin)
-  spawn.dragon(coin)
-
-  spawn.durahan(coin)
-  spawn.gali(coin)
-  spawn.ghost(coin)
-  spawn.golem(coin)
-  spawn.hare(coin)
-
-  spawn.henger(coin)
-  spawn.jell(coin)
-  spawn.joker(coin)
-  spawn.metalner(coin)
-  spawn.mew(coin)
-
-  spawn.mocchi(coin)
-  spawn.monol(coin)
-  spawn.naga(coin)
-  spawn.phoenix(coin)
-  spawn.pixie(coin)
-
-  spawn.plant(coin)
-  spawn.suezo(coin)
-  spawn.tiger(coin)
-  spawn.worm(coin)
-  spawn.zilla(coin)
+  spawn.arrowhead(coin); spawn.centaur(coin); spawn.colorpandora(coin); spawn.dino(coin); spawn.dragon(coin);
+  spawn.durahan(coin); spawn.gali(coin); spawn.ghost(coin); spawn.golem(coin); spawn.hare(coin);
+  spawn.henger(coin); spawn.jell(coin); spawn.joker(coin); spawn.metalner(coin); spawn.mew(coin);
+  spawn.mocchi(coin); spawn.monol(coin); spawn.naga(coin); spawn.phoenix(coin); spawn.pixie(coin);
+  spawn.plant(coin); spawn.suezo(coin); spawn.tiger(coin); spawn.worm(coin); spawn.zilla(coin);
+  spawn.anymonster(coin); spawn.breeder(coin); spawn.mixed(coin);
 
   local btnparams = {
     type      = 'Checker_black',

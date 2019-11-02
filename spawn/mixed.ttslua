@@ -1,0 +1,10 @@
+
+function spawn.mixed(coin)
+  monster(mixed1, coin, 'mixeddeck')
+end
+
+function mixeddeck(obj, color, alt)
+  spawnDeck(mixed1, alt)
+  spawnDeck(mixed2, alt)
+  spawnDeck(mixed3, alt)
+end

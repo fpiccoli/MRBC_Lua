@@ -21,7 +21,7 @@ function spawnDeck(obj, alt)
   end
   spawnparams = {
     type      = 'DeckCustom',
-    position  = {value, 5, 13},
+    position  = {value, 5, 13.5},
     rotation  = {0,180,0},
     scale     = {1.5,1,1.5}
   }

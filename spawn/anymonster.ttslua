@@ -1,0 +1,8 @@
+
+function spawn.anymonster(coin)
+  monster(anymonster, coin, 'anymonsterdeck')
+end
+
+function anymonsterdeck(obj, color, alt)
+  spawnDeck(anymonster, alt)
+end

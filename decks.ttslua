@@ -2,7 +2,8 @@ pos1 = {0, 0.5, 0};pos2 = {5, 0.5, 0};pos3 = {10, 0.5, 0};pos4 = {15, 0.5, 0};po
 pos6 = {0, 0.5, 3};pos7 = {5, 0.5, 3};pos8 = {10, 0.5, 3};pos9 = {15, 0.5, 3};pos10 = {20, 0.5, 3};
 pos11 = {0, 0.5, 6};pos12 = {5, 0.5, 6};pos13 = {10, 0.5, 6};pos14 = {15, 0.5, 6};pos15 = {20, 0.5, 6};
 pos16 = {0, 0.5, 9};pos17 = {5, 0.5, 9};pos18 = {10, 0.5, 9};pos19 = {15, 0.5, 9};pos20 = {20, 0.5, 9};
-pos21 = {0, 0.5, 12};pos22 = {5, 0.5, 12};pos23 = {10, 0.5, 12};pos24 = {15, 0.5, 12};pos25 = {20, 0.5, 12}
+pos21 = {0, 0.5, 12};pos22 = {5, 0.5, 12};pos23 = {10, 0.5, 12};pos24 = {15, 0.5, 12};pos25 = {20, 0.5, 12};
+pos26 = {5, 0.5, 15};pos27 = {10, 0.5, 15};pos28 = {15, 0.5, 15};
 
 function rgb(red, green, blue)
   return {r=red/255, g=green/255, b=blue/255}
@@ -37,3 +38,14 @@ suezo = {txt='Suezo', pos=pos22, img='1Dv0Iamb4AKargbV6ma9HC9h2EO4kW5cP', number
 tiger = {txt='Tiger', pos=pos23, img='11L8Uau7ad7vO7Cib2ogJs2nVM8hBta6Z', number=16, color=rgb(4, 129, 209), font_color=rgb(255,255,255)}
 worm = {txt='Worm', pos=pos24, img='1wIV6km1ilR02rJ_zMJ8_o2Zc3sIw5U3m', number=14, color=rgb(195, 122, 67), font_color=rgb(255,255,255)}
 zilla = {txt='Zilla', pos=pos25, img='1ECet8rCZmBhmpsgf_sg93Gn5niXLdx5c', number=16, color=rgb(6, 55, 96), font_color=rgb(255,255,255)}
+
+anymonster = {txt='Any\nMonster', pos=pos26, img='1LK565-fsk06tHg3wFnbChfwpggF5SgbQ', number=19, color=rgb(255, 255, 255), font_color=rgb(0,0,0)}
+
+breederspe1 = {txt='Breeder', pos=pos27, img='1qEVrbEjmmdFmBx2w3u7iJp_S3hfRivIP', number=15, color=rgb(72, 57, 57), font_color=rgb(255,255,255)}
+breederspe2 = {txt='Breeder', pos=pos27, img='1BoCwNKRgGtuIcOZhp1pQrSdncZq7-p-Q', number=3, color=rgb(72, 57, 57), font_color=rgb(255,255,255)}
+breederenv1 = {txt='Breeder', pos=pos27, img='1HHF3lRwFOSMpdptm7VZ2ulWRDXV00-B4', number=16, color=rgb(72, 57, 57), font_color=rgb(255,255,255)}
+breederenv2 = {txt='Breeder', pos=pos27, img='1a9a-LZPYGMccu1ZGjD-09RzHie8yiT7I', number=4, color=rgb(72, 57, 57), font_color=rgb(255,255,255)}
+
+mixed1 = {txt='Mixed', pos=pos28, img='1GPlIppA91TnkUsb9kxoLTIJXdpKaZBGb', number=15, color=rgb(247, 247, 249), font_color=rgb(0,0,0)}
+mixed2 = {txt='Mixed', pos=pos28, img='1JDeGA9KHgcwGO8KSiCCMaV8c0wSrEv6k', number=16, color=rgb(247, 247, 249), font_color=rgb(0,0,0)}
+mixed3 = {txt='Mixed', pos=pos28, img='14gLs8y5TKjjELTcg6ahTDY6VR4iZ42Tj', number=10, color=rgb(247, 247, 249), font_color=rgb(0,0,0)}

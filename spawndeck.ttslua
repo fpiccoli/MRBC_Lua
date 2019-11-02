@@ -32,4 +32,8 @@ spawn = {}
 #include spawn/worm
 #include spawn/zilla
 
+#include spawn/anymonster
+#include spawn/breeder
+#include spawn/mixed
+
 #include spawn

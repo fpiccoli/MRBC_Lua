@@ -1,0 +1,11 @@
+
+function spawn.breeder(coin)
+  monster(breederspe1, coin, 'breederdeck')
+end
+
+function breederdeck(obj, color, alt)
+  spawnDeck(breederspe1, alt)
+  spawnDeck(breederspe2, alt)
+  spawnDeck(breederenv1, alt)
+  spawnDeck(breederenv2, alt)
+end
