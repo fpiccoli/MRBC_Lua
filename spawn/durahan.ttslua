@@ -4,5 +4,5 @@ function spawn.durahan(coin)
 end
 
 function durahandeck(obj, color, alt)
-  spawnDeck(durahan.img, alt)
+  spawnDeck(durahan, alt)
 end

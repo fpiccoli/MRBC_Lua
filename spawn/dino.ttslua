@@ -4,5 +4,5 @@ function spawn.dino(coin)
 end
 
 function dinodeck(obj, color, alt)
-  spawnDeck(dino.img, alt)
+  spawnDeck(dino, alt)
 end

@@ -4,5 +4,5 @@ function spawn.worm(coin)
 end
 
 function wormdeck(obj, color, alt)
-  spawnDeck(worm.img, alt)
+  spawnDeck(worm, alt)
 end

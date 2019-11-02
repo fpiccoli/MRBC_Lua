@@ -4,5 +4,5 @@ function spawn.mocchi(coin)
 end
 
 function mocchideck(obj, color, alt)
-  spawnDeck(mocchi.img, alt)
+  spawnDeck(mocchi, alt)
 end

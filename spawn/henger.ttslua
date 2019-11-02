@@ -4,5 +4,5 @@ function spawn.henger(coin)
 end
 
 function hengerdeck(obj, color, alt)
-  spawnDeck(henger.img, alt)
+  spawnDeck(henger, alt)
 end

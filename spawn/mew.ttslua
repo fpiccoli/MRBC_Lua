@@ -4,5 +4,5 @@ function spawn.mew(coin)
 end
 
 function mewdeck(obj, color, alt)
-  spawnDeck(mew.img, alt)
+  spawnDeck(mew, alt)
 end

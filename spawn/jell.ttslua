@@ -4,5 +4,5 @@ function spawn.jell(coin)
 end
 
 function jelldeck(obj, color, alt)
-  spawnDeck(jell.img, alt)
+  spawnDeck(jell, alt)
 end

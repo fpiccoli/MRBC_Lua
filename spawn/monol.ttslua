@@ -4,5 +4,5 @@ function spawn.monol(coin)
 end
 
 function monoldeck(obj, color, alt)
-  spawnDeck(monol.img, alt)
+  spawnDeck(monol, alt)
 end

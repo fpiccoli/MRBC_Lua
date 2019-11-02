@@ -4,5 +4,5 @@ function spawn.ghost(coin)
 end
 
 function ghostdeck(obj, color, alt)
-  spawnDeck(ghost.img, alt)
+  spawnDeck(ghost, alt)
 end

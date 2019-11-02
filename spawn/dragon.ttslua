@@ -4,5 +4,5 @@ function spawn.dragon(coin)
 end
 
 function dragondeck(obj, color, alt)
-  spawnDeck(dragon.img, alt)
+  spawnDeck(dragon, alt)
 end

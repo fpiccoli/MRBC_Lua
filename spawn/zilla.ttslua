@@ -4,5 +4,5 @@ function spawn.zilla(coin)
 end
 
 function zilladeck(obj, color, alt)
-  spawnDeck(zilla.img, alt)
+  spawnDeck(zilla, alt)
 end

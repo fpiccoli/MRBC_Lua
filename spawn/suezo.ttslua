@@ -4,5 +4,5 @@ function spawn.suezo(coin)
 end
 
 function suezodeck(obj, color, alt)
-  spawnDeck(suezo.img, alt)
+  spawnDeck(suezo, alt)
 end

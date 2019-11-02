@@ -14,7 +14,7 @@ function monster(obj, coin, deck)
   coin.createButton(drawButton)
 end
 
-function spawnDeck(imgurl, alt)
+function spawnDeck(obj, alt)
   value = -82
   if alt then
     value = -62
@@ -27,12 +27,12 @@ function spawnDeck(imgurl, alt)
   }
   object = spawnObject(spawnparams)
   params = {
-    face        = "https://drive.google.com/uc?export=download&id="..imgurl,
+    face        = "https://drive.google.com/uc?export=download&id="..obj.img,
     unique_back = false,
     back        = "https://drive.google.com/uc?export=download&id=1UKrGHayxga-bEIvMHSEDG4HRJJe6rL2c",
     width       = 5,
     height      = 4,
-    number      = 17,
+    number      = obj.number,
   }
   object.setCustomObject(params)
 end

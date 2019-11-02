@@ -4,5 +4,5 @@ function spawn.arrowhead(coin)
 end
 
 function arrowheaddeck(obj, color, alt)
-  spawnDeck(arrowhead.img, alt)
+  spawnDeck(arrowhead, alt)
 end

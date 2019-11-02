@@ -4,5 +4,5 @@ function spawn.phoenix(coin)
 end
 
 function phoenixdeck(obj, color, alt)
-  spawnDeck(phoenix.img, alt)
+  spawnDeck(phoenix, alt)
 end

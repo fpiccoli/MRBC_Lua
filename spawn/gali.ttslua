@@ -4,5 +4,5 @@ function spawn.gali(coin)
 end
 
 function galideck(obj, color, alt)
-  spawnDeck(gali.img, alt)
+  spawnDeck(gali, alt)
 end

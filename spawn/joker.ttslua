@@ -4,5 +4,5 @@ function spawn.joker(coin)
 end
 
 function jokerdeck(obj, color, alt)
-  spawnDeck(joker.img, alt)
+  spawnDeck(joker, alt)
 end

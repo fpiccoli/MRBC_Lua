@@ -4,5 +4,5 @@ function spawn.metalner(coin)
 end
 
 function metalnerdeck(obj, color, alt)
-  spawnDeck(metalner.img, alt)
+  spawnDeck(metalner, alt)
 end

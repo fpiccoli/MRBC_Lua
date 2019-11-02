@@ -4,5 +4,5 @@ function spawn.golem(coin)
 end
 
 function golemdeck(obj, color, alt)
-  spawnDeck(golem.img, alt)
+  spawnDeck(golem, alt)
 end

@@ -4,5 +4,5 @@ function spawn.tiger(coin)
 end
 
 function tigerdeck(obj, color, alt)
-  spawnDeck(tiger.img, alt)
+  spawnDeck(tiger, alt)
 end

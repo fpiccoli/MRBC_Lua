@@ -4,5 +4,5 @@ function spawn.plant(coin)
 end
 
 function plantdeck(obj, color, alt)
-  spawnDeck(plant.img, alt)
+  spawnDeck(plant, alt)
 end

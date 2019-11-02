@@ -4,5 +4,5 @@ function spawn.naga(coin)
 end
 
 function nagadeck(obj, color, alt)
-  spawnDeck(naga.img, alt)
+  spawnDeck(naga, alt)
 end

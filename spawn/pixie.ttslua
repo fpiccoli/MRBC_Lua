@@ -4,5 +4,5 @@ function spawn.pixie(coin)
 end
 
 function pixiedeck(obj, color, alt)
-  spawnDeck(pixie.img, alt)
+  spawnDeck(pixie, alt)
 end

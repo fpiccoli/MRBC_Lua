@@ -4,5 +4,5 @@ function spawn.centaur(coin)
 end
 
 function centaurdeck(obj, color, alt)
-  spawnDeck(centaur.img, alt)
+  spawnDeck(centaur, alt)
 end
