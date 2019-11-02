@@ -1,0 +1,41 @@
+turn = {}
+
+function turn.guts()
+  token.createButton(drawButton)
+
+  local turnButton = {}
+  drawButton.click_function = 'turnCards'
+  drawButton.label = 'Turn'
+  drawButton.function_owner = token
+  drawButton.position = {0, 0.8, -5}
+  drawButton.rotation = {0, 0, 0}
+  drawButton.width = 1400
+  drawButton.height = 1200
+  drawButton.font_size = 400
+
+  token.createButton(drawButton)
+end
+
+function turnCards()
+  if not Player[color].seated then
+    broadcastToAll('Player ' .. color .. ' is not seated at the table!', playerRGB)
+    return
+  end
+
+  local playerHand = Player[color].getHandObjects()
+
+  local counter = 0
+  for index in pairs(playerHand) do
+    if playerHand[index].getRotation().z == 180 then
+      counter = counter + 1
+      playerHand[index].setPosition(playerHandPosition)
+      playerHand[index].setPositionSmooth(apZonePosition)
+    end
+  end
+
+  if Player[enemyColor].seated then
+    broadcastToColor('YOUR TURN', enemyColor, enemyPlayerRGB)
+  end
+  broadcastToAll(Player[color].steam_name .. ' turned ' .. counter .. ' AP', playerRGB)
+
+end

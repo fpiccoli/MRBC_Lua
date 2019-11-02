@@ -1,0 +1,8 @@
+
+function draw.blue(btn)
+  drawBtn(blue, btn, 'bluedraw')
+end
+
+function bluedraw(obj, color, alt)
+  drawCard(blue, color, alt)
+end

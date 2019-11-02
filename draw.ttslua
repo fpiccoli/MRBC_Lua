@@ -1,0 +1,58 @@
+function drawBtn(obj, btn, func)
+  local drawButton = {}
+  drawButton.click_function = func
+  drawButton.label = 'Draw'
+  drawButton.function_owner = self
+  drawButton.position = obj.drawButtonPosition
+  drawButton.rotation = {0, 0, 0}
+  drawButton.width = 1400
+  drawButton.height = 1200
+  drawButton.font_size = 400
+  drawButton.color = obj.playerRGB
+
+  btn.createButton(drawButton)
+end
+
+function drawCard(obj, player, alt)
+  if obj.color ~= player then
+    broadcastToColor('You\'re not the player ' .. obj.color .. '!', player, obj.playerRGB)
+    return
+  end
+
+  local deck = getObjectFromGUID(obj.deckZoneGUID).getObjects()[1]
+
+  if deck == nil then
+    broadcastToColor('Put your deck on the deck zone!', obj.color, obj.playerRGB)
+    return
+  end
+
+  local playerHand = Player[obj.color].getHandObjects()
+
+  local counter = 0
+  for index in pairs(playerHand) do
+    counter = counter + 1
+  end
+
+  if counter >= 5 then
+    broadcastToColor('You already have 5 cards!', obj.color, obj.playerRGB)
+    return
+  end
+
+  local numberOfCards = 5 - counter
+
+  broadcastToAll(Player[obj.color].steam_name .. ' drew ' .. numberOfCards .. ' card(s).', obj.playerRGB)
+
+  params = {cards = deck, color = obj.color}
+  Timer.create({
+    identifier     = 'darCartas',
+    function_name  = 'drawOneCardByTime',
+    parameters     = params,
+    delay          = 0.25,
+    repetitions    = numberOfCards,
+  })
+
+end
+
+function drawOneCardByTime(deck)
+  deck.cards.deal(1, deck.color)
+end

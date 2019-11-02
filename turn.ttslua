@@ -1,0 +1,40 @@
+function turnBtn(obj, btn, func)
+
+  local turnButton = {}
+  turnButton.click_function = func
+  turnButton.label = 'Turn'
+  turnButton.function_owner = self
+  turnButton.position = obj.turnButtonPosition
+  turnButton.rotation = {0, 0, 0}
+  turnButton.width = 1400
+  turnButton.height = 1200
+  turnButton.font_size = 400
+  turnButton.color = obj.playerRGB
+
+  btn.createButton(turnButton)
+end
+
+function turnCard(obj, player, alt)
+  if obj.color ~= player then
+    broadcastToColor('You\'re not the player ' .. obj.color .. '!', player, obj.playerRGB)
+    return
+  end
+
+  local playerHand = Player[obj.color].getHandObjects()
+
+  local counter = 0
+  for index in pairs(playerHand) do
+    if playerHand[index].getRotation().z == 180 then
+      counter = counter + 1
+      playerHand[index].setPosition(obj.playerHandPosition)
+      playerHand[index].setPositionSmooth(obj.apZonePosition)
+    end
+  end
+
+  if Player[obj.enemy].seated then
+    broadcastToColor('YOUR TURN', obj.enemy, obj.enemyRGB)
+    broadcastToColor(Player[obj.color].steam_name .. ' turned ' .. counter .. ' GUTS', obj.enemy, obj.enemyRGB)
+  end
+  broadcastToColor(Player[obj.color].steam_name .. ' turned ' .. counter .. ' GUTS', obj.color, obj.playerRGB)
+
+end

@@ -1,49 +1,73 @@
 --[[ Lua code. See documentation: https://api.tabletopsimulator.com/ --]]
 #include MRBC_Lua/spawndeck
+#include MRBC_Lua/drawturn
 
 --[[ The onLoad event is called after the game save finishes loading. --]]
 function onLoad()
- local coinparams = {
-   type      = 'Checker_black',
-   position  = {-82, 0.6, 30},
-   rotation  = {0.00, 180.00, 0.00},
-   lock      = true
- }
- coin = spawnObject(coinparams)
- coin.setLock(true)
+  local coinparams = {
+    type      = 'Checker_black',
+    position  = {-82, 0.6, 30},
+    rotation  = {0.00, 180.00, 0.00},
+    lock      = true
+  }
+  coin = spawnObject(coinparams)
+  coin.setLock(true)
 
- spawn.arrowhead(coin)
- spawn.centaur(coin)
- spawn.colorpandora(coin)
- spawn.dino(coin)
- spawn.dragon(coin)
+  spawn.arrowhead(coin)
+  spawn.centaur(coin)
+  spawn.colorpandora(coin)
+  spawn.dino(coin)
+  spawn.dragon(coin)
 
- spawn.durahan(coin)
- spawn.gali(coin)
- spawn.ghost(coin)
- spawn.golem(coin)
- spawn.hare(coin)
+  spawn.durahan(coin)
+  spawn.gali(coin)
+  spawn.ghost(coin)
+  spawn.golem(coin)
+  spawn.hare(coin)
 
- spawn.henger(coin)
- spawn.jell(coin)
- spawn.joker(coin)
- spawn.metalner(coin)
- spawn.mew(coin)
+  spawn.henger(coin)
+  spawn.jell(coin)
+  spawn.joker(coin)
+  spawn.metalner(coin)
+  spawn.mew(coin)
 
- spawn.mocchi(coin)
- spawn.monol(coin)
- spawn.naga(coin)
- spawn.phoenix(coin)
- spawn.pixie(coin)
+  spawn.mocchi(coin)
+  spawn.monol(coin)
+  spawn.naga(coin)
+  spawn.phoenix(coin)
+  spawn.pixie(coin)
 
- spawn.plant(coin)
- spawn.suezo(coin)
- spawn.tiger(coin)
- spawn.worm(coin)
- spawn.zilla(coin)
+  spawn.plant(coin)
+  spawn.suezo(coin)
+  spawn.tiger(coin)
+  spawn.worm(coin)
+  spawn.zilla(coin)
+
+  local btnparams = {
+    type      = 'Checker_black',
+    position  = {0, 0.6, 0},
+    rotation  = {0, 180, 0},
+    lock      = true
+  }
+  btn = spawnObject(btnparams)
+  btn.setLock(true)
+
+  -- draw.orange(btn)
+  -- draw.pink(btn)
+  -- draw.yellow(btn)
+  -- draw.green(btn)
+  draw.blue(btn)
+  -- draw.red(btn)
+  --
+  -- turn.orange(btn)
+  -- turn.pink(btn)
+  -- turn.yellow(btn)
+  -- turn.green(btn)
+  turn.blue(btn)
+  -- turn.red(btn)
 end
 
 --[[ The onUpdate event is called once per frame. --]]
 function onUpdate()
- --[[ print('onUpdate loop!') --]]
+  --[[ print('onUpdate loop!') --]]
 end

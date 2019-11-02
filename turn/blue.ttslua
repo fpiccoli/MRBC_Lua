@@ -1,0 +1,8 @@
+
+function turn.blue(btn)
+  turnBtn(blue, btn, 'blueturn')
+end
+
+function blueturn(obj, color, alt)
+  turnCard(blue, color, alt)
+end
