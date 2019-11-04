@@ -1,0 +1,169 @@
+<!-- Xml UI. See documentation: https://api.tabletopsimulator.com/ui/introUI/ -->
+<Defaults>
+  <ProgressBar fillImageColor="#FFFFFF" textOutline="#FFFFFF" fontStyle="bold" percentageTextFormat="0"/>
+  <Button fontStyle="bold" fontSize="20"/>
+  <Button class="hpUp" color="#FFFFFF"/>
+  <Button class="hpDown" color="#FFFFFF"/>
+  <Row dontUseTableRowBackground="true" visibility="Yellow"/>
+  <Cell dontUseTableCellBackground="true"/>
+  <Text color="black" fontStyle="bold" fontSize="15"/>
+</Defaults>
+
+<Panel id="ScoreSheetPanel" class="WindowBorder" width="250" height="400" offsetXY="0 -250" rectAlignment="MiddleRight" showAnimation="Grow" hideAnimation="Shrink" returnToOriginalPositionWhenReleased="false" allowDragging="true" color="#bbbbbb">
+
+  <TableLayout height="0" width="250" columnWidths="60 100 30 25 25" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="0 0">
+    <Row id="P1_bar_1" preferredHeight="30">
+      <Cell>
+      </Cell>
+      <Cell>
+        <Text id="P1_name" onClick="b9e9f9/P1_hide">Your Team</Text>
+      </Cell>
+      <Cell>
+      </Cell>
+      <Cell>
+      </Cell>
+    </Row>
+    <Row id="P1_bar_2" preferredHeight="40">
+      <Cell>
+        <Text id="yellow_monster_3_name">M1</Text>
+      </Cell>
+      <Cell>
+        <ProgressBar id="yellow_hp_percentage" percentage="100"></ProgressBar>
+      </Cell>
+      <Cell>
+        <Text id="yellow_monster_3_hp"></Text>
+      </Cell>
+      <Cell>
+        <Button onClick="yellowHPDown" class="hpDown">-</Button>
+      </Cell>
+      <Cell>
+        <Button onClick="yellowHPUp" class="hpUp">+</Button>
+      </Cell>
+    </Row>
+    <Row id="P1_bar_2" preferredHeight="40">
+      <Cell>
+        <Text id="yellow_monster_3_name">M2</Text>
+      </Cell>
+      <Cell>
+        <ProgressBar id="yellow_hp_percentage" percentage="100"></ProgressBar>
+      </Cell>
+      <Cell>
+        <Text id="yellow_monster_3_hp"></Text>
+      </Cell>
+      <Cell>
+        <Button onClick="yellowHPDown" class="hpDown">-</Button>
+      </Cell>
+      <Cell>
+        <Button onClick="yellowHPUp" class="hpUp">+</Button>
+      </Cell>
+    </Row>
+    <Row id="P1_bar_2" preferredHeight="40">
+      <Cell>
+        <Text id="yellow_monster_3_name">M3</Text>
+      </Cell>
+      <Cell>
+        <ProgressBar id="yellow_hp_percentage" percentage="100"></ProgressBar>
+      </Cell>
+      <Cell>
+        <Text id="yellow_monster_3_hp"></Text>
+      </Cell>
+      <Cell>
+        <Button onClick="yellowHPDown" class="hpDown">-</Button>
+      </Cell>
+      <Cell>
+        <Button onClick="yellowHPUp" class="hpUp">+</Button>
+      </Cell>
+    </Row>
+    <Row id="P1_bar_2" preferredHeight="40">
+      <Cell>
+        <Text id="P1_name" onClick="b9e9f9/P1_hide">Cards</Text>
+      </Cell>
+      <Cell>
+        <ProgressBar id="P1_hp_bar" percentage="100"></ProgressBar>
+      </Cell>
+      <Cell>
+        <Text id="yellow_cards">0</Text>
+      </Cell>
+      <Cell>
+      </Cell>
+    </Row>
+  </TableLayout>
+
+  <TableLayout height="0" width="250" columnWidths="60 100 30 25 25" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="0 200">
+    <Row id="P1_bar_1" preferredHeight="30">
+      <Cell>
+      </Cell>
+      <Cell>
+        <Text id="P1_name" onClick="b9e9f9/P1_hide">Enemy Team</Text>
+      </Cell>
+      <Cell>
+      </Cell>
+      <Cell>
+      </Cell>
+    </Row>
+    <Row id="P1_bar_2" preferredHeight="40">
+      <Cell>
+        <Text id="yellow_monster_3_name">M1</Text>
+      </Cell>
+      <Cell>
+        <ProgressBar id="yellow_hp_percentage" percentage="100"></ProgressBar>
+      </Cell>
+      <Cell>
+        <Text id="yellow_monster_3_hp"></Text>
+      </Cell>
+      <Cell>
+        <Button onClick="yellowHPDown" class="hpDown">-</Button>
+      </Cell>
+      <Cell>
+        <Button onClick="yellowHPUp" class="hpUp">+</Button>
+      </Cell>
+    </Row>
+    <Row id="P1_bar_2" preferredHeight="40">
+      <Cell>
+        <Text id="yellow_monster_3_name">M2</Text>
+      </Cell>
+      <Cell>
+        <ProgressBar id="yellow_hp_percentage" percentage="100"></ProgressBar>
+      </Cell>
+      <Cell>
+        <Text id="yellow_monster_3_hp"></Text>
+      </Cell>
+      <Cell>
+        <Button onClick="yellowHPDown" class="hpDown">-</Button>
+      </Cell>
+      <Cell>
+        <Button onClick="yellowHPUp" class="hpUp">+</Button>
+      </Cell>
+    </Row>
+    <Row id="P1_bar_2" preferredHeight="40">
+      <Cell>
+        <Text id="yellow_monster_3_name">M3</Text>
+      </Cell>
+      <Cell>
+        <ProgressBar id="yellow_hp_percentage" percentage="100"></ProgressBar>
+      </Cell>
+      <Cell>
+        <Text id="yellow_monster_3_hp"></Text>
+      </Cell>
+      <Cell>
+        <Button onClick="yellowHPDown" class="hpDown">-</Button>
+      </Cell>
+      <Cell>
+        <Button onClick="yellowHPUp" class="hpUp">+</Button>
+      </Cell>
+    </Row>
+    <Row id="P1_bar_2" preferredHeight="40">
+      <Cell>
+        <Text id="P1_name" onClick="b9e9f9/P1_hide">Cards</Text>
+      </Cell>
+      <Cell>
+        <ProgressBar id="P1_hp_bar" percentage="100"></ProgressBar>
+      </Cell>
+      <Cell>
+        <Text id="yellow_cards">0</Text>
+      </Cell>
+      <Cell>
+      </Cell>
+    </Row>
+  </TableLayout>
+</Panel>

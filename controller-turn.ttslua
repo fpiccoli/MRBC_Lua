@@ -1,3 +1,12 @@
+turn = {}
+
+#include turn/orange
+#include turn/pink
+#include turn/yellow
+#include turn/green
+#include turn/blue
+#include turn/red
+
 function turnBtn(obj, btn, func)
 
   local turnButton = {}

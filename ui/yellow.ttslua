@@ -1,0 +1,48 @@
+count = {}
+
+function count.deck(deck)
+  if deck ~= nil then
+    deck.getQuantity()
+    UI.setValue("yellow_cards", deck.getQuantity())
+  end
+end
+
+function yellowHPDown()
+  local atual = UI.getValue("yellow_monster_3_hp");
+  if atual ~= nil then
+    local novo = atual-1
+    if novo >= 0 then
+      UI.setValue("yellow_monster_3_hp", atual-1)
+      UI.setAttribute("yellow_hp_percentage", 'percentage', (novo/7)*100) --TODO MAX HP
+    end
+  end
+end
+
+function yellowHPUp()
+  local atual = UI.getValue("yellow_monster_3_hp");
+  if atual ~= nil then
+    local novo = atual+1
+    UI.setValue("yellow_monster_3_hp", atual+1)
+    UI.setAttribute("yellow_hp_percentage", 'percentage', (novo/7)*100) --TODO MAX HP
+  end
+end
+
+-- panel player-yellow
+-- yellow-team-name
+-- yellow_m1_name
+-- yellow_m1_hp
+-- yellow_m1_percentage
+-- yellow_m2_name
+-- yellow_m2_hp
+-- yellow_m2_percentage
+-- yellow_m3_name
+-- yellow_m3_hp
+-- yellow_m3_percentage
+-- yellow-m1hp-down
+-- yellow-m1hp-up
+-- yellow-m2hp-down
+-- yellow-m2hp-up
+-- yellow-m3hp-down
+-- yellow-m3hp-up
+-- yellow-cards-percentage
+-- yellow-cards-value

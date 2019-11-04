@@ -1,0 +1,353 @@
+-- +++++++++++++ START OF PHENOMEN'S HP BARS +++++++++++++
+
+function onload()
+
+    Language = 1 --ENGLISH BY DEFAULT
+    -- EDIT THIS FUNCTION IF YOU WANT TO ADD LOCALIZATION
+    changeLanguage()
+
+    -- ENABLE HP BROADCAST MESSAGES
+    HPbroadcast = true
+
+    -- SOME GAME MECHANICS ALLOW MORE THAN MAXIMUM OR LESS THAN MINIMUM HP SO YOU CAN TURN IT HERE
+    allowMoreThanMaxHP = false
+    allowLessThanMinHP = false
+
+    -- DEFAULT VALUES
+    hpStep = 1
+
+    P1_hp = 10
+    P1_maxhp = 10
+    P2_hp = 10
+    P2_maxhp = 10
+    P3_hp = 10
+    P3_maxhp = 10
+    P4_hp = 10
+    P4_maxhp = 10
+    P5_hp = 10
+    P5_maxhp = 10
+    P6_hp = 10
+    P6_maxhp = 10
+    P7_hp = 10
+    P7_maxhp = 10
+    P8_hp = 10
+    P8_maxhp = 10
+    P9_hp = 10
+    P9_maxhp = 10
+    P10_hp = 10
+    P10_maxhp = 10
+
+    -- LIST OF COLORS AVAILABLE ON THE TABLE. USED FOR ELEMENT VISIBILITY
+    allColors = "Black|Grey|White|Blue|Red|Yellow|Green|Purple|Pink|Brown|Orange|Teal"
+
+    -- SHITTY WORKAROUND TO GET DEFAULT VALUES FOR DROPDOWN TO WORK
+    barNumber = "1"
+    barColor = "White"
+    barName = "Player"
+
+    -- MATERIAL COLORS
+    colorWhite = "#FFFFFF"
+    colorBlue = "#2196F3"
+    colorRed = "#c62828"
+    colorYellow = "#FFEB3B"
+    colorGreen = "#4CAF50"
+    colorPurple = "#9C27B0"
+    colorOrange = "#FF9800"
+    colorBrown = "#795548"
+    colorPink = "#E91E63"
+    colorGrey = "#9E9E9E"
+    colorBlack = "#263238"
+
+    createButtons()
+
+end
+
+-- CREATING BUTTONS ON CONTROL PANEL
+function createButtons()
+    local sizeX = 330
+    local sizeY = 650
+
+    self.createButton({
+        click_function = "addBar", function_owner = self,
+        position = { - 0.75, 0.12, - 1.25}, height = sizeX, width = sizeY, color = {1, 1, 1, 0}, label = ""
+    })
+
+    self.createButton({
+        click_function = "removeBar", function_owner = self,
+        position = {0.75, 0.12, - 1.25}, height = sizeX, width = sizeY, color = {1, 1, 1, 0}, label = ""
+    })
+
+    self.createButton({
+        click_function = "toggleHPAllowMore", function_owner = self,
+        position = { - 0.75, 0.12, -0.2}, height = sizeX, width = sizeY, color = {1, 1, 1, 0}, label = ""
+    })
+
+    self.createButton({
+        click_function = "toggleHPAllowLess", function_owner = self,
+        position = {0.75, 0.12, -0.2}, height = sizeX, width = sizeY, color = {1, 1, 1, 0}, label = ""
+    })
+
+    self.createButton({
+        click_function = "toggleHPBroadcast", function_owner = self,
+        position = { - 0.75, 0.12, 0.7}, height = sizeX, width = sizeY, color = {1, 1, 1, 0}, label = ""
+    })
+
+    self.createButton({
+        click_function = "changeLanguage", function_owner = self,
+        position = {0.75, 0.12, 0.7}, height = sizeX, width = sizeY, color = {1, 1, 1, 0}, label = ""
+    })
+
+
+    self.createButton({
+        click_function = "changeSkin", function_owner = self,
+        position = { - 0.75, 0.12, 1.6}, height = sizeX, width = sizeY, color = {1, 1, 1, 0}, label = ""
+    })
+
+    self.createInput({
+        input_function = "selectStep", function_owner = self,
+        position = {0.75, 0.12, 1.6}, height = 250, width = 450, color = {0.32, 0.32, 0.32, 1}, font_color = {1, 1, 1, 1}, label = "1", value = "1", alignment = 3, validation = 2, font_size = 170,
+    })
+
+end
+
+function changeLanguage()
+if Language == 1 then
+textHPname = "HP"
+textHPBroadcastEnabled = "Broadcast for " .. textHPname .. " is enabled."
+textHPBroadcastDisabled = "Broadcast for " .. textHPname .. " is disabled."
+textLost = " lost "
+textGot = " got "
+textMax = "'s max "
+textIncreased = " increased: "
+textDecreased = " decreased: "
+textAllowMoreThanMaxHP = textHPname .. " can now increase beyond maximum."
+textAllowLessThanMinHP = textHPname .. " can now drop below minimum."
+textDisallowMoreThanMaxHP = textHPname .. " can't increase beyond maximum."
+textDisallowLessThanMinHP = textHPname .. " can't drop below minimum."
+textStep = "Increase/decrease step is set to "
+textRemove = "Click on the Name above the bar to remove bar."
+broadcastToAll("Language is set to English", {1,1,1})
+Language = 0
+else
+      textHPname = "HP"
+      textHPBroadcastEnabled = "Оповещение о " .. textHPname .. " включено."
+      textHPBroadcastDisabled = "Оповещение о " .. textHPname .. " выключено."
+      textLost = " потерял "
+      textGot = " получил "
+      textMax = " максимум "
+      textIncreased = " увеличен: "
+      textDecreased = " уменьшен: "
+      textAllowMoreThanMaxHP = textHPname .. " теперь может превысить максимум."
+      textAllowLessThanMinHP = textHPname .. " теперь может опуститься ниже минимума."
+      textDisallowMoreThanMaxHP = textHPname .. " больше не может превысить максимум."
+      textDisallowLessThanMinHP = textHPname .. " больше не может опуститься ниже минимума."
+      textStep = "Шаг увеличения/уменьшения изменен на "
+      textRemove = "Нажми на имя над баром, чтобы скрыть бар."
+      broadcastToAll("Language is set to Russian", {1,1,1})
+      Language = 1
+    end
+end
+
+-- CHANGE SKIN
+function changeSkin()
+broadcastToAll("Skin selector coming soon...", {1,1,1})
+end
+
+-- CHANGE HP STEP BASED ON INPUT
+function selectStep(obj, color, input, stillEditing)
+    hpStep = input
+    if not stillEditing then
+        broadcastToAll(textStep .. hpStep, {1,1,1})
+    end
+end
+
+-- ENABLE AND DISABLE BROADCAST
+function toggleHPBroadcast()
+    if HPbroadcast == true then
+        broadcastToAll(textHPBroadcastDisabled, {1, 1, 1})
+        HPbroadcast = false
+    else
+        broadcastToAll(textHPBroadcastEnabled, {1, 1, 1})
+        HPbroadcast = true
+    end
+end
+
+-- ALLOW MORE THAN MAX HP
+function toggleHPAllowMore()
+    if allowMoreThanMaxHP == true then
+        broadcastToAll(textDisallowMoreThanMaxHP, {1, 1, 1})
+        allowMoreThanMaxHP = false
+    else
+        broadcastToAll(textAllowMoreThanMaxHP, {1, 1, 1})
+        allowMoreThanMaxHP = true
+    end
+end
+
+-- ALLOW LESS THAN MIN HP
+function toggleHPAllowLess()
+    if allowLessThanMinHP == true then
+        broadcastToAll(textDisallowLessThanMinHP, {1, 1, 1})
+        allowLessThanMinHP = false
+    else
+        broadcastToAll(textAllowLessThanMinHP, {1, 1, 1})
+        allowLessThanMinHP = true
+    end
+end
+
+-- SHOW ADD BAR MENU
+function addBar()
+    UI.setAttribute("AddBarMenu_1", "visibility", allColors)
+    UI.setAttribute("AddBarMenu_2", "visibility", allColors)
+end
+
+-- SHOW ADD BAR MENU
+function removeBar()
+    broadcastToAll(textRemove, {1,1,1})
+end
+
+-- HIDE BARS WHEN NAME LABEL IS CLICKED
+for z = 1, 10 do
+    _G['P' .. z .. '_hide'] = function(obj, player_color)
+            realHideBar(obj, player_color, z)
+    end
+end
+
+function realHideBar(obj, player_color, z)
+    UI.setAttribute("P" .. z .. "_bar_1", "visibility", false)
+    UI.setAttribute("P" .. z .. "_bar_2", "visibility", false)
+end
+
+function BarNumberSelected(player, option, id)
+    barNumber = option
+end
+
+function BarColorSelected(player, option, id)
+    barColor = option
+end
+
+function BarNameSelected(player, option, id)
+    barName = option
+end
+
+function CreateBar()
+
+        if barNumber == "1" then
+            playerName_1 = barName
+        end
+        if barNumber == "2" then
+            playerName_2 = barName
+        end
+        if barNumber == "3" then
+            playerName_3 = barName
+        end
+        if barNumber == "4" then
+            playerName_4 = barName
+        end
+        if barNumber == "5" then
+            playerName_5 = barName
+        end
+        if barNumber == "6" then
+            playerName_6 = barName
+        end
+        if barNumber == "7" then
+            playerName_7 = barName
+        end
+        if barNumber == "8" then
+            playerName_8 = barName
+        end
+        if barNumber == "9" then
+            playerName_9 = barName
+        end
+        if barNumber == "10" then
+            playerName_10 = barName
+        end
+
+    if barColor == "White" then NiceColor = colorWhite end
+    if barColor == "Blue" then NiceColor = colorBlue end
+    if barColor == "Red" then NiceColor = colorRed end
+    if barColor == "Yellow" then NiceColor = colorYellow end
+    if barColor == "Green" then NiceColor = colorGreen end
+    if barColor == "Purple" then NiceColor = colorPurple end
+    if barColor == "Orange" then NiceColor = colorOrange end
+    if barColor == "Brown" then NiceColor = colorBrown end
+    if barColor == "Pink" then NiceColor = colorPink end
+    if barColor == "Grey" then NiceColor = colorGrey end
+    if barColor == "Black" then NiceColor = colorBlack end
+
+    UI.setAttribute("P" .. barNumber .. "_name", "text", _G['playerName_' .. barNumber] .. ": " .. _G['P' .. barNumber .. '_hp'] .. "/" .. _G['P' .. barNumber .. '_maxhp'])
+    UI.setAttribute("P" .. barNumber .. "_name", "color", NiceColor)
+    UI.setAttribute("P" .. barNumber .. "_hp_bar", "fillImageColor", NiceColor)
+    UI.setAttribute("P" .. barNumber .. "_bar_1", "visibility", allColors)
+    UI.setAttribute("P" .. barNumber .. "_bar_2", "visibility", allColors)
+
+    UI.setAttribute("AddBarMenu_1", "visibility", false)
+    UI.setAttribute("AddBarMenu_2", "visibility", false)
+end
+
+-- UPDATE PROGRESS BAR AND VALUE
+function updateBar(id, percent, playerLable, newName)
+    UI.setAttribute(id, "percentage", percent)
+    UI.setAttribute(playerLable, "text", newName)
+end
+
+for z = 1, 10 do
+    _G['P' .. z .. '_hpDown'] = function(obj, player_color)
+        realHpDown(obj, player_color, z)
+    end
+end
+
+for z = 1, 10 do
+    _G['P' .. z .. '_hpUp'] = function(obj, player_color)
+        realHpUp(obj, player_color, z)
+    end
+end
+
+for z = 1, 10 do
+    _G['P' .. z .. '_maxDown'] = function(obj, player_color)
+        realMaxDown(obj, player_color, z)
+    end
+end
+
+for z = 1, 10 do
+    _G['P' .. z .. '_maxUp'] = function(obj, player_color)
+        realMaxUp(obj, player_color, z)
+    end
+end
+
+function realHpDown(obj, player_color, z)
+    _G['P' .. z .. '_hp'] = _G['P' .. z .. '_hp'] - hpStep
+    if _G['P' .. z .. '_hp'] < 0 and allowLessThanMinHP == false then _G['P' .. z .. '_hp'] = 0 end
+    _G['P' .. z .. '_percent'] = _G['P' .. z .. '_hp'] / _G['P' .. z .. '_maxhp'] * 100
+    if HPbroadcast == true then broadcastToAll(_G['playerName_' .. z] .. textLost .. textHPname .. ": " .. _G['P' .. z .. '_hp'] .. "/" .. _G['P' .. z .. '_maxhp'], {1, 1, 1}) end
+    newName = _G['playerName_' .. z] .. ": " .. _G['P' .. z .. '_hp'] .. "/" .. _G['P' .. z .. '_maxhp']
+    updateBar("P" .. z .. "_hp_bar", _G['P' .. z .. '_percent'], "P" .. z .. "_name", newName)
+end
+
+function realHpUp(obj, player_color, z)
+    _G['P' .. z .. '_hp'] = _G['P' .. z .. '_hp'] + hpStep
+    if _G['P' .. z .. '_hp'] > _G['P' .. z .. '_maxhp'] and allowMoreThanMaxHP == false then _G['P' .. z .. '_hp'] = _G['P' .. z .. '_maxhp'] end
+    _G['P' .. z .. '_percent'] = _G['P' .. z .. '_hp'] / _G['P' .. z .. '_maxhp'] * 100
+    if HPbroadcast == true then broadcastToAll(_G['playerName_' .. z] .. textGot .. textHPname .. ": " .. _G['P' .. z .. '_hp'] .. "/" .. _G['P' .. z .. '_maxhp'], {1, 1, 1}) end
+    newName = _G['playerName_' .. z] .. ": " .. _G['P' .. z .. '_hp'] .. "/" .. _G['P' .. z .. '_maxhp']
+    updateBar("P" .. z .. "_hp_bar", _G['P' .. z .. '_percent'], "P" .. z .. "_name", newName)
+end
+
+function realMaxDown(obj, player_color, z)
+    _G['P' .. z .. '_maxhp'] = _G['P' .. z .. '_maxhp'] - hpStep
+    if _G['P' .. z .. '_maxhp'] < 1 then _G['P' .. z .. '_maxhp'] = 1 end
+    if _G['P' .. z .. '_hp'] > _G['P' .. z .. '_maxhp'] then _G['P' .. z .. '_hp'] = _G['P' .. z .. '_maxhp'] end
+    _G['P' .. z .. '_percent'] = _G['P' .. z .. '_hp'] / _G['P' .. z .. '_maxhp'] * 100
+    if HPbroadcast == true then broadcastToAll(_G['playerName_' .. z] .. textMax .. textHPname .. textDecreased .. _G['P' .. z .. '_hp'] .. "/" .. _G['P' .. z .. '_maxhp'], {1, 1, 1}) end
+    newName = _G['playerName_' .. z] .. ": " .. _G['P' .. z .. '_hp'] .. "/" .. _G['P' .. z .. '_maxhp']
+    updateBar("P" .. z .. "_hp_bar", _G['P' .. z .. '_percent'], "P" .. z .. "_name", newName)
+end
+
+function realMaxUp(obj, player_color, z)
+    _G['P' .. z .. '_maxhp'] = _G['P' .. z .. '_maxhp'] + hpStep
+    _G['P' .. z .. '_percent'] = _G['P' .. z .. '_hp'] / _G['P' .. z .. '_maxhp'] * 100
+    if HPbroadcast == true then broadcastToAll(_G['playerName_' .. z] .. textMax .. textHPname .. textIncreased .. _G['P' .. z .. '_hp'] .. "/" .. _G['P' .. z .. '_maxhp'], {1, 1, 1}) end
+    newName = _G['playerName_' .. z] .. ": " .. _G['P' .. z .. '_hp'] .. "/" .. _G['P' .. z .. '_maxhp']
+    updateBar("P" .. z .. "_hp_bar", _G['P' .. z .. '_percent'], "P" .. z .. "_name", newName)
+end
+
+-- +++++++++++++ END OF PHENOMEN'S HP BARS +++++++++++++
