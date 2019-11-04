@@ -2,167 +2,134 @@
 <Defaults>
   <ProgressBar fillImageColor="#FFFFFF" textOutline="#FFFFFF" fontStyle="bold" percentageTextFormat="0"/>
   <Button fontStyle="bold" fontSize="20"/>
-  <Button class="hpUp" color="#FFFFFF"/>
-  <Button class="hpDown" color="#FFFFFF"/>
-  <Row dontUseTableRowBackground="true" visibility="Yellow"/>
+  <Row dontUseTableRowBackground="true"/>
   <Cell dontUseTableCellBackground="true"/>
   <Text color="black" fontStyle="bold" fontSize="15"/>
 </Defaults>
 
-<Panel id="ScoreSheetPanel" class="WindowBorder" width="250" height="400" offsetXY="0 -250" rectAlignment="MiddleRight" showAnimation="Grow" hideAnimation="Shrink" returnToOriginalPositionWhenReleased="false" allowDragging="true" color="#bbbbbb">
-
-  <TableLayout height="0" width="250" columnWidths="60 100 30 25 25" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="0 0">
-    <Row id="P1_bar_1" preferredHeight="30">
+<Panel id="player-yellow" class="WindowBorder" width="260" height="400" offsetXY="0 -250" visibility="Yellow" rectAlignment="MiddleRight" showAnimation="Grow" hideAnimation="Shrink" returnToOriginalPositionWhenReleased="false" allowDragging="true" color="Yellow">
+  <TableLayout height="0" width="260" columnWidths="60 100 40 25 25" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="0 0">
+    <Row preferredHeight="30">
       <Cell>
       </Cell>
       <Cell>
-        <Text id="P1_name" onClick="b9e9f9/P1_hide">Your Team</Text>
-      </Cell>
-      <Cell>
-      </Cell>
-      <Cell>
+        <Text id="yellow-team-name">Your Team</Text>
       </Cell>
     </Row>
-    <Row id="P1_bar_2" preferredHeight="40">
+    <Row preferredHeight="40">
       <Cell>
-        <Text id="yellow_monster_3_name">M1</Text>
+        <Text id="yellow_m1_name">M1</Text>
       </Cell>
       <Cell>
-        <ProgressBar id="yellow_hp_percentage" percentage="100"></ProgressBar>
+        <ProgressBar id="yellow_m1_percentage" percentage="100"></ProgressBar>
       </Cell>
       <Cell>
-        <Text id="yellow_monster_3_hp"></Text>
+        <Text id="yellow_m1_hp">0/0</Text>
       </Cell>
       <Cell>
-        <Button onClick="yellowHPDown" class="hpDown">-</Button>
+        <Button onClick="yellow-m1hp-down">-</Button>
       </Cell>
       <Cell>
-        <Button onClick="yellowHPUp" class="hpUp">+</Button>
-      </Cell>
-    </Row>
-    <Row id="P1_bar_2" preferredHeight="40">
-      <Cell>
-        <Text id="yellow_monster_3_name">M2</Text>
-      </Cell>
-      <Cell>
-        <ProgressBar id="yellow_hp_percentage" percentage="100"></ProgressBar>
-      </Cell>
-      <Cell>
-        <Text id="yellow_monster_3_hp"></Text>
-      </Cell>
-      <Cell>
-        <Button onClick="yellowHPDown" class="hpDown">-</Button>
-      </Cell>
-      <Cell>
-        <Button onClick="yellowHPUp" class="hpUp">+</Button>
+        <Button onClick="yellow-m1hp-up">+</Button>
       </Cell>
     </Row>
-    <Row id="P1_bar_2" preferredHeight="40">
+    <Row preferredHeight="40">
       <Cell>
-        <Text id="yellow_monster_3_name">M3</Text>
+        <Text id="yellow_m2_name">M2</Text>
       </Cell>
       <Cell>
-        <ProgressBar id="yellow_hp_percentage" percentage="100"></ProgressBar>
+        <ProgressBar id="yellow_m2_percentage" percentage="100"></ProgressBar>
       </Cell>
       <Cell>
-        <Text id="yellow_monster_3_hp"></Text>
+        <Text id="yellow_m2_hp">0/0</Text>
       </Cell>
       <Cell>
-        <Button onClick="yellowHPDown" class="hpDown">-</Button>
+        <Button onClick="yellow-m2hp-down">-</Button>
       </Cell>
       <Cell>
-        <Button onClick="yellowHPUp" class="hpUp">+</Button>
+        <Button onClick="yellow-m2hp-up">+</Button>
       </Cell>
     </Row>
-    <Row id="P1_bar_2" preferredHeight="40">
+    <Row preferredHeight="40">
       <Cell>
-        <Text id="P1_name" onClick="b9e9f9/P1_hide">Cards</Text>
+        <Text id="yellow_m3_name">M3</Text>
       </Cell>
       <Cell>
-        <ProgressBar id="P1_hp_bar" percentage="100"></ProgressBar>
+        <ProgressBar id="yellow_m3_percentage" percentage="100"></ProgressBar>
       </Cell>
       <Cell>
-        <Text id="yellow_cards">0</Text>
+        <Text id="yellow_m3_hp">0/0</Text>
       </Cell>
       <Cell>
+        <Button onClick="yellow-m3hp-down">-</Button>
+      </Cell>
+      <Cell>
+        <Button onClick="yellow-m3hp-up">+</Button>
+      </Cell>
+    </Row>
+    <Row preferredHeight="40">
+      <Cell>
+        <Text>Deck</Text>
+      </Cell>
+      <Cell>
+        <ProgressBar id="yellow-cards-percentage" percentage="100"></ProgressBar>
+      </Cell>
+      <Cell>
+        <Text id="yellow-cards-value">0/0</Text>
       </Cell>
     </Row>
   </TableLayout>
 
-  <TableLayout height="0" width="250" columnWidths="60 100 30 25 25" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="0 200">
-    <Row id="P1_bar_1" preferredHeight="30">
+  <TableLayout height="0" width="260" columnWidths="60 140 50" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="0 200">
+    <Row preferredHeight="30">
       <Cell>
       </Cell>
       <Cell>
-        <Text id="P1_name" onClick="b9e9f9/P1_hide">Enemy Team</Text>
-      </Cell>
-      <Cell>
-      </Cell>
-      <Cell>
+        <Text id="yellow-team-name">Your Team</Text>
       </Cell>
     </Row>
-    <Row id="P1_bar_2" preferredHeight="40">
+    <Row preferredHeight="40">
       <Cell>
-        <Text id="yellow_monster_3_name">M1</Text>
+        <Text id="yellow_m1_name">M1</Text>
       </Cell>
       <Cell>
-        <ProgressBar id="yellow_hp_percentage" percentage="100"></ProgressBar>
+        <ProgressBar id="yellow_m1_percentage" percentage="100"></ProgressBar>
       </Cell>
       <Cell>
-        <Text id="yellow_monster_3_hp"></Text>
-      </Cell>
-      <Cell>
-        <Button onClick="yellowHPDown" class="hpDown">-</Button>
-      </Cell>
-      <Cell>
-        <Button onClick="yellowHPUp" class="hpUp">+</Button>
+        <Text id="yellow_m1_hp">0/0</Text>
       </Cell>
     </Row>
-    <Row id="P1_bar_2" preferredHeight="40">
+    <Row preferredHeight="40">
       <Cell>
-        <Text id="yellow_monster_3_name">M2</Text>
+        <Text id="yellow_m2_name">M2</Text>
       </Cell>
       <Cell>
-        <ProgressBar id="yellow_hp_percentage" percentage="100"></ProgressBar>
+        <ProgressBar id="yellow_m2_percentage" percentage="100"></ProgressBar>
       </Cell>
       <Cell>
-        <Text id="yellow_monster_3_hp"></Text>
-      </Cell>
-      <Cell>
-        <Button onClick="yellowHPDown" class="hpDown">-</Button>
-      </Cell>
-      <Cell>
-        <Button onClick="yellowHPUp" class="hpUp">+</Button>
+        <Text id="yellow_m2_hp">0/0</Text>
       </Cell>
     </Row>
-    <Row id="P1_bar_2" preferredHeight="40">
+    <Row preferredHeight="40">
       <Cell>
-        <Text id="yellow_monster_3_name">M3</Text>
+        <Text id="yellow_m3_name">M3</Text>
       </Cell>
       <Cell>
-        <ProgressBar id="yellow_hp_percentage" percentage="100"></ProgressBar>
+        <ProgressBar id="yellow_m3_percentage" percentage="100"></ProgressBar>
       </Cell>
       <Cell>
-        <Text id="yellow_monster_3_hp"></Text>
-      </Cell>
-      <Cell>
-        <Button onClick="yellowHPDown" class="hpDown">-</Button>
-      </Cell>
-      <Cell>
-        <Button onClick="yellowHPUp" class="hpUp">+</Button>
+        <Text id="yellow_m3_hp">0/0</Text>
       </Cell>
     </Row>
-    <Row id="P1_bar_2" preferredHeight="40">
+    <Row preferredHeight="40">
       <Cell>
-        <Text id="P1_name" onClick="b9e9f9/P1_hide">Cards</Text>
+        <Text>Deck</Text>
       </Cell>
       <Cell>
-        <ProgressBar id="P1_hp_bar" percentage="100"></ProgressBar>
+        <ProgressBar id="yellow-cards-percentage" percentage="100"></ProgressBar>
       </Cell>
       <Cell>
-        <Text id="yellow_cards">0</Text>
-      </Cell>
-      <Cell>
+        <Text id="yellow-cards-value">0/0</Text>
       </Cell>
     </Row>
   </TableLayout>
