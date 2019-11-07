@@ -1,1 +1,163 @@
-#include ui/yellow
+text = {}
+count = {}
+
+function text.ui(pos, rot, size, label)
+  if label == nil then
+    label = '0'
+  end
+
+  local params = {
+    type      = '3DText',
+    position  = pos,
+    rotation  = rot,
+  }
+  obj = spawnObject(params)
+  obj.setValue(label)
+  obj.TextTool.setFontColor({1,1,1})
+  obj.TextTool.setFontSize(size)
+  obj.setScale({1.5,1.5,1.5})
+  return obj
+end
+
+function count.deck(deck)
+  local val = 0
+  if deck == nil then
+    return val
+  end
+  if(deck.getQuantity() >= 1) then
+    val = deck.getQuantity()
+  end
+  UI.setAttribute('yellow-cards-percentage', 'percentage', (val/50)*100)
+  UI.setValue('yellow-cards-value', val..'/50')
+  yellowDeck.setValue(val..'')
+  return val
+end
+
+function count.turn(deck)
+  if deck == nil then
+    yellowGuts.setValue('0')
+    return '0'
+  end
+  if(deck.getQuantity() == -1) then
+    yellowGuts.setValue('1')
+    return '1'
+  end
+  yellowGuts.setValue(deck.getQuantity()..'')
+  return deck.getQuantity()
+end
+
+function onChangeColor(player, option, id)
+  local teste = string.lower(player.color)..'-'..id;
+  if option == 'Brown' then
+    option = '#713b17'
+  end
+  if option == 'Teal' then
+    option = '#21b19b'
+  end
+  if option == 'Orange' then
+    option = '#f4641d'
+  end
+  if option == 'Purple' then
+    option = '#a020f0'
+  end
+  if option == 'Pink' then
+    option = '#f570ce'
+  end
+  UI.setAttribute(teste, 'fillImageColor', option);
+  UI.setAttribute('yellow-m2-percentage', 'percentage', option);
+end
+
+function onChangeHP(player, option, id)
+  local teste = string.lower(player.color)..'-'..id;
+  UI.setValue(teste, option..'/'..option);
+  updateTextUI(id, option)
+end
+
+function onChangeName(player, option, id)
+  local teste = string.lower(player.color)..'-'..id;
+  UI.setValue(teste, option);
+  if split(id,'-')[1] == 'm1' then
+    yellowM1.setValue(option);
+  end
+  if split(id,'-')[1] == 'm2' then
+    yellowM2.setValue(option);
+  end
+  if split(id,'-')[1] == 'm3' then
+    yellowM3.setValue(option);
+  end
+end
+
+function onChangeTeamName(player, option, id)
+  local teste = string.lower(player.color)..'-'..id;
+  UI.setValue(teste, option);
+end
+
+function toggleSet(player, option, id)
+  local visibility = UI.getAttribute(string.lower(player.color)..'-set-panel', 'visibility');
+  local change = 'false'
+  if visibility == 'false' then
+    change = player.color;
+  end
+  UI.setAttribute(string.lower(player.color)..'-set-panel', 'visibility', change);
+end
+
+function hpDown(player, option, id)
+  local stringHP = UI.getValue(string.lower(player.color)..'-'..option..'-hp');
+  if stringHP == nil then
+    return
+  end
+  local atual = split(stringHP, '/')[1] + 0
+  local max = split(stringHP, '/')[2] + 0
+  local novo = atual-1
+  if novo >= 0 then
+    UI.setValue(string.lower(player.color)..'-'..option..'-hp', (novo)..'/'..max)
+    UI.setAttribute(string.lower(player.color)..'-'..option..'-percentage', 'percentage', (novo/max)*100)
+    updateTextUI(option, novo)
+  end
+end
+
+function hpUp(player, option, id)
+  local stringHP = UI.getValue(string.lower(player.color)..'-'..option..'-hp');
+  if stringHP == nil then
+    return
+  end
+  local atual = split(stringHP, '/')[1] + 0
+  local max = split(stringHP, '/')[2] + 0
+  local novo = atual+1
+  if novo <= max then
+    UI.setValue(string.lower(player.color)..'-'..option..'-hp', (novo)..'/'..max)
+    UI.setAttribute(string.lower(player.color)..'-'..option..'-percentage', 'percentage', (novo/max)*100)
+    updateTextUI(option, novo)
+  end
+end
+
+function updateTextUI(id, option)
+  if split(id,'-')[1] == 'm1' then
+    yellowM1HP.setValue(option..'');
+  end
+  if split(id,'-')[1] == 'm2' then
+    yellowM2HP.setValue(option..'');
+  end
+  if split(id,'-')[1] == 'm3' then
+    yellowM31HP.setValue(option..'');
+  end
+end
+
+function split(pString, pPattern)
+  local Table = {}
+  local fpat = "(.-)" .. pPattern
+  local last_end = 1
+  local s, e, cap = pString:find(fpat, 1)
+  while s do
+    if s ~= 1 or cap ~= "" then
+      table.insert(Table,cap)
+    end
+    last_end = e+1
+    s, e, cap = pString:find(fpat, last_end)
+  end
+  if last_end <= #pString then
+    cap = pString:sub(last_end)
+    table.insert(Table, cap)
+  end
+  return Table
+end

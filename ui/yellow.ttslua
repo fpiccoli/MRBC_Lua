@@ -1,98 +1,10 @@
---TODO 3D TEXT
-getObjectFromGUID('18a198').setValue('9')
-getObjectFromGUID('18a198').setPosition({0.25, 1.5, -6.30})
-getObjectFromGUID('18a198').TextTool.setFontColor({1,1,1})
-getObjectFromGUID('18a198').TextTool.setFontSize(300)
-getObjectFromGUID('18a198').setScale({1.5,1.5,1.5})
 
-function onChangeColor(player, option, id)
-  local teste = string.lower(player.color)..'-'..id;
-  if option == 'Brown' then
-    option = '#713b17'
-  end
-  if option == 'Teal' then
-    option = '#21b19b'
-  end
-  if option == 'Orange' then
-    option = '#f4641d'
-  end
-  if option == 'Purple' then
-    option = '#a020f0'
-  end
-  if option == 'Pink' then
-    option = '#f570ce'
-  end
-  UI.setAttribute(teste, 'fillImageColor', option);
-  UI.setAttribute('yellow-m2-percentage', 'percentage', option);
-end
-
-function onChangeHP(player, option, id)
-  local teste = string.lower(player.color)..'-'..id;
-  UI.setValue(teste, option..'/'..option);
-end
-
-function onChangeName(player, option, id)
-  local teste = string.lower(player.color)..'-'..id;
-  UI.setValue(teste, option);
-end
-
-function onChangeTeamName(player, option, id)
-  local teste = string.lower(player.color)..'-'..id;
-  UI.setValue(teste, option);
-end
-
-function toggleSet(player, option, id)
-  local visibility = UI.getAttribute(string.lower(player.color)..'-set-panel', 'visibility');
-  local change = 'false'
-  if visibility == 'false' then
-    change = player.color;
-  end
-  UI.setAttribute(string.lower(player.color)..'-set-panel', 'visibility', change);
-end
-
-function hpDown(player, option, id)
-  local stringHP = UI.getValue(string.lower(player.color)..'-'..option..'-hp');
-  if stringHP == nil then
-    return
-  end
-  local atual = split(stringHP, '/')[1] + 0
-  local max = split(stringHP, '/')[2] + 0
-  local novo = atual-1
-  if novo >= 0 then
-    UI.setValue(string.lower(player.color)..'-'..option..'-hp', (novo)..'/'..max)
-    UI.setAttribute(string.lower(player.color)..'-'..option..'-percentage', 'percentage', (novo/max)*100)
-  end
-end
-
-function hpUp(player, option, id)
-  local stringHP = UI.getValue(string.lower(player.color)..'-'..option..'-hp');
-  if stringHP == nil then
-    return
-  end
-  local atual = split(stringHP, '/')[1] + 0
-  local max = split(stringHP, '/')[2] + 0
-  local novo = atual+1
-  if novo <= max then
-    UI.setValue(string.lower(player.color)..'-'..option..'-hp', (novo)..'/'..max)
-    UI.setAttribute(string.lower(player.color)..'-'..option..'-percentage', 'percentage', (novo/max)*100)
-  end
-end
-
-function split(pString, pPattern)
-  local Table = {}  -- NOTE: use {n = 0} in Lua-5.0
-  local fpat = "(.-)" .. pPattern
-  local last_end = 1
-  local s, e, cap = pString:find(fpat, 1)
-  while s do
-    if s ~= 1 or cap ~= "" then
-      table.insert(Table,cap)
-    end
-    last_end = e+1
-    s, e, cap = pString:find(fpat, last_end)
-  end
-  if last_end <= #pString then
-    cap = pString:sub(last_end)
-    table.insert(Table, cap)
-  end
-  return Table
-end
+yellowM1HP = text.ui({-5.40, 1.15, -6.60}, {90, 0.00, 0.00}, 200)
+yellowM2HP = text.ui({0.25, 1.15, -6.60}, {90, 0.00, 0.00}, 200)
+yellowM3HP = text.ui({6, 1.15, -6.60}, {90, 0.00, 0.00}, 200)
+yellowM1 = text.ui({-5.40, 1.15, -11}, {90, 0.00, 0.00}, 100, 'M1')
+yellowM2 = text.ui({0.25, 1.15, -11}, {90, 0.00, 0.00}, 100, 'M2')
+yellowM3 = text.ui({6, 1.15, -11}, {90, 0.00, 0.00}, 100, 'M3')
+yellowDiscards = text.ui({-8.15, 1.15, -19.85}, {90, 0.00, 0.00}, 100)
+yellowGuts = text.ui({0.25, 1.15, -19.85}, {90, 0.00, 0.00}, 100)
+yellowDeck = text.ui({8.90, 1.15, -19.85}, {90, 0.00, 0.00}, 100)

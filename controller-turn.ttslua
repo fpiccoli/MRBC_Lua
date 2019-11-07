@@ -35,7 +35,7 @@ function turnCard(obj, player, alt)
   for index in pairs(playerHand) do
     if playerHand[index].getRotation().z == 180 then
       counter = counter + 1
-      playerHand[index].setPosition(obj.playerHandPosition)
+      playerHand[index].setPosition(obj.handPosition)
       playerHand[index].setPositionSmooth(obj.apZonePosition)
     end
   end

@@ -12,6 +12,7 @@
     <Row preferredHeight="35">
     <Cell><Button onClick="toggleSet">Set</Button></Cell>
       <Cell><Text id="yellow-team-name">Your Team</Text></Cell>
+      <Cell><Text id="yellow-team-guts">0</Text></Cell>
     </Row>
     <Row preferredHeight="40">
       <Cell><Text id="yellow-m1-name">M1</Text></Cell>
@@ -45,6 +46,7 @@
     <Row preferredHeight="35">
       <Cell></Cell>
       <Cell><Text id="yellow-enemy-team-name">Enemy Team</Text></Cell>
+      <Cell><Text id="yellow-enemy-team-guts">0</Text></Cell>
     </Row>
     <Row preferredHeight="40">
       <Cell><Text id="yellow-enemy-m1-name">M1</Text></Cell>
