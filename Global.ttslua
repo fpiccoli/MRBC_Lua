@@ -54,6 +54,7 @@ end
 function onUpdate()
   local gutsYellow = count.turn(getObjectFromGUID('c4ee22').getObjects()[1]) --//TODO dynamic GUID
   count.deck(getObjectFromGUID('ce16a7').getObjects()[1]) --//TODO dynamic GUID
+  count.deck(getObjectFromGUID('2248fb').getObjects()[1]) --//TODO dynamic GUID
   UI.setValue('yellow-team-guts', gutsYellow) --//TODO dynamic Color
   --[[ print('onUpdate loop!') --]]
 end
