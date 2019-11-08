@@ -52,9 +52,16 @@ end
 
 --[[ The onUpdate event is called once per frame. --]]
 function onUpdate()
-  local gutsYellow = count.turn(getObjectFromGUID('c4ee22').getObjects()[1]) --//TODO dynamic GUID
-  count.deck(getObjectFromGUID('ce16a7').getObjects()[1]) --//TODO dynamic GUID
-  count.deck(getObjectFromGUID('2248fb').getObjects()[1]) --//TODO dynamic GUID
-  UI.setValue('yellow-team-guts', gutsYellow) --//TODO dynamic Color
+  local gutsYellow = count.deck(getObjectFromGUID('c4ee22').getObjects()[1]) --//TODO dynamic GUID
+  yellowGuts.setValue(gutsYellow..'')
+  UI.setValue('yellow-team-guts', gutsYellow)
+
+  local deckYellow = count.deck(getObjectFromGUID('ce16a7').getObjects()[1]) --//TODO dynamic GUID
+  UI.setAttribute('yellow-cards-percentage', 'percentage', (deckYellow/50)*100)
+  UI.setValue('yellow-cards-value', deckYellow..'/50')
+  yellowDeck.setValue(deckYellow..'')
+
+  local discardsYellow = count.deck(getObjectFromGUID('1ac0ca').getObjects()[1]) --//TODO dynamic GUID
+  yellowDiscards.setValue(discardsYellow..'')
   --[[ print('onUpdate loop!') --]]
 end
