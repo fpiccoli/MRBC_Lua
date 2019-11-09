@@ -50,18 +50,28 @@ function onLoad()
 
 end
 
---[[ The onUpdate event is called once per frame. --]]
 function onUpdate()
-  local gutsYellow = count.deck(getObjectFromGUID('c4ee22').getObjects()[1]) --//TODO dynamic GUID
-  yellowGuts.setValue(gutsYellow..'')
+  local gutsYellow = count.deck(getObjectFromGUID(yellow.apZoneGUID).getObjects()[1]) --//TODO dynamic GUID
+  yellow3D.guts.setValue(gutsYellow..'')
   UI.setValue('yellow-team-guts', gutsYellow)
 
-  local deckYellow = count.deck(getObjectFromGUID('ce16a7').getObjects()[1]) --//TODO dynamic GUID
+  local deckYellow = count.deck(getObjectFromGUID(yellow.deckZoneGUID).getObjects()[1]) --//TODO dynamic GUID
   UI.setAttribute('yellow-cards-percentage', 'percentage', (deckYellow/50)*100)
   UI.setValue('yellow-cards-value', deckYellow..'/50')
-  yellowDeck.setValue(deckYellow..'')
+  yellow3D.deck.setValue(deckYellow..'')
 
-  local discardsYellow = count.deck(getObjectFromGUID('1ac0ca').getObjects()[1]) --//TODO dynamic GUID
-  yellowDiscards.setValue(discardsYellow..'')
-  --[[ print('onUpdate loop!') --]]
+  local discardsYellow = count.deck(getObjectFromGUID(yellow.discardsZoneGUID).getObjects()[1]) --//TODO dynamic GUID
+  yellow3D.discards.setValue(discardsYellow..'')
+
+  local gutsGreen = count.deck(getObjectFromGUID(green.apZoneGUID).getObjects()[1]) --//TODO dynamic GUID
+  green3D.guts.setValue(gutsGreen..'')
+  UI.setValue('green-team-guts', gutsGreen)
+
+  local deckGreen = count.deck(getObjectFromGUID(green.deckZoneGUID).getObjects()[1]) --//TODO dynamic GUID
+  UI.setAttribute('green-cards-percentage', 'percentage', (deckGreen/50)*100)
+  UI.setValue('green-cards-value', deckGreen..'/50')
+  green3D.deck.setValue(deckGreen..'')
+
+  local discardsGreen = count.deck(getObjectFromGUID(green.discardsZoneGUID).getObjects()[1]) --//TODO dynamic GUID
+  green3D.discards.setValue(discardsGreen..'')
 end

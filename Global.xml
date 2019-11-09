@@ -37,11 +37,10 @@
     </Row>
     <Row preferredHeight="40">
       <Cell><Text>Deck</Text></Cell>
-      <Cell><ProgressBar id="yellow-cards-percentage" percentage="100" fillImageColor="#003c00"></ProgressBar></Cell>
+      <Cell><ProgressBar id="yellow-cards-percentage" percentage="0" fillImageColor="#003c00"></ProgressBar></Cell>
       <Cell><Text id="yellow-cards-value">0/50</Text></Cell>
     </Row>
   </TableLayout>
-
   <TableLayout height="0" width="260" columnWidths="60 140 50" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 210">
     <Row preferredHeight="35">
       <Cell></Cell>
@@ -65,12 +64,11 @@
     </Row>
     <Row preferredHeight="40">
       <Cell><Text>Deck</Text></Cell>
-      <Cell><ProgressBar id="yellow-enemy-cards-percentage" percentage="100" fillImageColor="#610000"></ProgressBar></Cell>
+      <Cell><ProgressBar id="yellow-enemy-cards-percentage" percentage="0" fillImageColor="#610000"></ProgressBar></Cell>
       <Cell><Text id="yellow-enemy-cards-value">0/50</Text></Cell>
     </Row>
   </TableLayout>
 </Panel>
-
 <Panel id="yellow-set-panel" class="WindowBorder" width="360" height="160" visibility="false" rectAlignment="MiddleCenter" showAnimation="Grow" hideAnimation="Shrink" returnToOriginalPositionWhenReleased="false" allowDragging="true" color="Yellow">
   <TableLayout rectAlignment="UpperCenter" height="30" width="330" columnWidths="80 120 100 30">
     <Row preferredHeight="30">
@@ -84,7 +82,7 @@
     <Row preferredHeight="30">
       <Cell>
         <Dropdown id="m1-hp" onValueChanged="onChangeHP">
-          <Option>1</Option><Option>2</Option><Option>3</Option><Option>4</Option><Option>5</Option><Option>6</Option><Option>7</Option><Option>8</Option><Option>9</Option><Option>10</Option><Option>11</Option>
+          <Option>0</Option><Option>4</Option><Option>5</Option><Option>6</Option><Option>7</Option><Option>8</Option><Option>9</Option><Option>10</Option><Option>11</Option>
         </Dropdown>
       </Cell>
       <Cell>
@@ -97,7 +95,7 @@
     <Row preferredHeight="30">
       <Cell>
         <Dropdown id="m2-hp" onValueChanged="onChangeHP">
-          <Option>1</Option><Option>2</Option><Option>3</Option><Option>4</Option><Option>5</Option><Option>6</Option><Option>7</Option><Option>8</Option><Option>9</Option><Option>10</Option><Option>11</Option>
+          <Option>0</Option><Option>4</Option><Option>5</Option><Option>6</Option><Option>7</Option><Option>8</Option><Option>9</Option><Option>10</Option><Option>11</Option>
         </Dropdown>
       </Cell>
       <Cell>
@@ -110,7 +108,125 @@
     <Row preferredHeight="30">
       <Cell>
         <Dropdown id="m3-hp" onValueChanged="onChangeHP">
-          <Option>1</Option><Option>2</Option><Option>3</Option><Option>4</Option><Option>5</Option><Option>6</Option><Option>7</Option><Option>8</Option><Option>9</Option><Option>10</Option><Option>11</Option>
+          <Option>0</Option><Option>4</Option><Option>5</Option><Option>6</Option><Option>7</Option><Option>8</Option><Option>9</Option><Option>10</Option><Option>11</Option>
+        </Dropdown>
+      </Cell>
+      <Cell>
+        <Dropdown id="m3-percentage" onValueChanged="onChangeColor">
+          <Option>White</Option><Option>Blue</Option><Option>Red</Option><Option>Green</Option><Option>Yellow</Option><Option>Orange</Option><Option>Teal</Option><Option>Purple</Option><Option>Pink</Option><Option>Brown</Option><Option>Grey</Option><Option>Black</Option>
+        </Dropdown>
+      </Cell>
+      <Cell><InputField id="m3-name" onValueChanged="onChangeName">Name</InputField></Cell>
+    </Row>
+    <Row preferredHeight="30">
+      <Cell><Text>Team Name</Text></Cell>
+      <Cell><InputField id="team-name" onValueChanged="onChangeTeamName">Team Name</InputField></Cell>
+    </Row>
+  </TableLayout>
+</Panel>
+
+<Panel id="player-green" class="WindowBorder" width="260" height="420" offsetXY="0 -250" visibility="Green" rectAlignment="MiddleRight" showAnimation="Grow" hideAnimation="Shrink" returnToOriginalPositionWhenReleased="false" allowDragging="true" color="Green">
+  <TableLayout height="0" width="260" columnWidths="60 100 40 25 25" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 0">
+    <Row preferredHeight="35">
+    <Cell><Button onClick="toggleSet">Set</Button></Cell>
+      <Cell><Text id="green-team-name">Your Team</Text></Cell>
+      <Cell><Text id="green-team-guts">0</Text></Cell>
+    </Row>
+    <Row preferredHeight="40">
+      <Cell><Text id="green-m1-name">M1</Text></Cell>
+      <Cell><ProgressBar id="green-m1-percentage" percentage="100"></ProgressBar></Cell>
+      <Cell><Text id="green-m1-hp">0/0</Text></Cell>
+      <Cell><Button onClick="hpDown(m1)">-</Button></Cell>
+      <Cell><Button onClick="hpUp(m1)">+</Button></Cell>
+    </Row>
+    <Row preferredHeight="40">
+      <Cell><Text id="green-m2-name">M2</Text></Cell>
+      <Cell><ProgressBar id="green-m2-percentage" percentage="100"></ProgressBar></Cell>
+      <Cell><Text id="green-m2-hp">0/0</Text></Cell>
+      <Cell><Button onClick="hpDown(m2)">-</Button></Cell>
+      <Cell><Button onClick="hpUp(m2)">+</Button></Cell>
+    </Row>
+    <Row preferredHeight="40">
+      <Cell><Text id="green-m3-name">M3</Text></Cell>
+      <Cell><ProgressBar id="green-m3-percentage" percentage="100"></ProgressBar></Cell>
+      <Cell><Text id="green-m3-hp">0/0</Text></Cell>
+      <Cell><Button onClick="hpDown(m3)">-</Button></Cell>
+      <Cell><Button onClick="hpUp(m3)">+</Button></Cell>
+    </Row>
+    <Row preferredHeight="40">
+      <Cell><Text>Deck</Text></Cell>
+      <Cell><ProgressBar id="green-cards-percentage" percentage="100" fillImageColor="#003c00"></ProgressBar></Cell>
+      <Cell><Text id="green-cards-value">0/50</Text></Cell>
+    </Row>
+  </TableLayout>
+  <TableLayout height="0" width="260" columnWidths="60 140 50" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 210">
+    <Row preferredHeight="35">
+      <Cell></Cell>
+      <Cell><Text id="green-enemy-team-name">Enemy Team</Text></Cell>
+      <Cell><Text id="green-enemy-team-guts">0</Text></Cell>
+    </Row>
+    <Row preferredHeight="40">
+      <Cell><Text id="green-enemy-m1-name">M1</Text></Cell>
+      <Cell><ProgressBar id="green-enemy-m1-percentage" percentage="100"></ProgressBar></Cell>
+      <Cell><Text id="green-enemy-m1-hp">0/0</Text></Cell>
+    </Row>
+    <Row preferredHeight="40">
+      <Cell><Text id="green-enemy-m2-name">M2</Text></Cell>
+      <Cell><ProgressBar id="green-enemy-m2-percentage" percentage="100"></ProgressBar></Cell>
+      <Cell><Text id="green-enemy-m2-hp">0/0</Text></Cell>
+    </Row>
+    <Row preferredHeight="40">
+      <Cell><Text id="green-enemy-m3-name">M3</Text></Cell>
+      <Cell><ProgressBar id="green-enemy-m3-percentage" percentage="100"></ProgressBar></Cell>
+      <Cell><Text id="green-enemy-m3-hp">0/0</Text></Cell>
+    </Row>
+    <Row preferredHeight="40">
+      <Cell><Text>Deck</Text></Cell>
+      <Cell><ProgressBar id="green-enemy-cards-percentage" percentage="100" fillImageColor="#610000"></ProgressBar></Cell>
+      <Cell><Text id="green-enemy-cards-value">0/50</Text></Cell>
+    </Row>
+  </TableLayout>
+</Panel>
+<Panel id="green-set-panel" class="WindowBorder" width="360" height="160" visibility="false" rectAlignment="MiddleCenter" showAnimation="Grow" hideAnimation="Shrink" returnToOriginalPositionWhenReleased="false" allowDragging="true" color="Green">
+  <TableLayout rectAlignment="UpperCenter" height="30" width="330" columnWidths="80 120 100 30">
+    <Row preferredHeight="30">
+      <Cell><Text>Max HP</Text></Cell>
+      <Cell><Text>Color</Text></Cell>
+      <Cell><Text>Monster Name</Text></Cell>
+      <Cell>
+        <Button onClick="toggleSet">x</Button>
+      </Cell>
+    </Row>
+    <Row preferredHeight="30">
+      <Cell>
+        <Dropdown id="m1-hp" onValueChanged="onChangeHP">
+          <Option>0</Option><Option>4</Option><Option>5</Option><Option>6</Option><Option>7</Option><Option>8</Option><Option>9</Option><Option>10</Option><Option>11</Option>
+        </Dropdown>
+      </Cell>
+      <Cell>
+        <Dropdown id="m1-percentage" onValueChanged="onChangeColor">
+          <Option>White</Option><Option>Blue</Option><Option>Red</Option><Option>Green</Option><Option>Yellow</Option><Option>Orange</Option><Option>Teal</Option><Option>Purple</Option><Option>Pink</Option><Option>Brown</Option><Option>Grey</Option><Option>Black</Option>
+        </Dropdown>
+      </Cell>
+      <Cell><InputField id="m1-name" onValueChanged="onChangeName">Name</InputField></Cell>
+    </Row>
+    <Row preferredHeight="30">
+      <Cell>
+        <Dropdown id="m2-hp" onValueChanged="onChangeHP">
+          <Option>0</Option><Option>4</Option><Option>5</Option><Option>6</Option><Option>7</Option><Option>8</Option><Option>9</Option><Option>10</Option><Option>11</Option>
+        </Dropdown>
+      </Cell>
+      <Cell>
+        <Dropdown id="m2-percentage" onValueChanged="onChangeColor">
+          <Option>White</Option><Option>Blue</Option><Option>Red</Option><Option>Green</Option><Option>Yellow</Option><Option>Orange</Option><Option>Teal</Option><Option>Purple</Option><Option>Pink</Option><Option>Brown</Option><Option>Grey</Option><Option>Black</Option>
+        </Dropdown>
+      </Cell>
+      <Cell><InputField id="m2-name" onValueChanged="onChangeName">Name</InputField></Cell>
+    </Row>
+    <Row preferredHeight="30">
+      <Cell>
+        <Dropdown id="m3-hp" onValueChanged="onChangeHP">
+          <Option>0</Option><Option>4</Option><Option>5</Option><Option>6</Option><Option>7</Option><Option>8</Option><Option>9</Option><Option>10</Option><Option>11</Option>
         </Dropdown>
       </Cell>
       <Cell>
