@@ -53,20 +53,21 @@ end
 function onChangeHP(player, option, id)
   local teste = string.lower(player.color)..'-'..id;
   UI.setValue(teste, option..'/'..option);
-  updateTextUI(id, option)
+  updateTextUI(id, option, string.lower(player.color))
 end
 
 function onChangeName(player, option, id)
   UI.setValue(string.lower(player.color)..'-'..id, option);
   local name = option:gsub(" ", "\n")
+  local player3D = getPlayer3D(string.lower(player.color))
   if split(id,'-')[1] == 'm1' then
-    yellowM1.setValue(name);
+    player3D.m1.name.setValue(name);
   end
   if split(id,'-')[1] == 'm2' then
-    yellowM2.setValue(name);
+    player3D.m2.name.setValue(name);
   end
   if split(id,'-')[1] == 'm3' then
-    yellowM3.setValue(name);
+    player3D.m3.name.setValue(name);
   end
 end
 
@@ -95,7 +96,7 @@ function hpDown(player, option, id)
   if novo >= 0 then
     UI.setValue(string.lower(player.color)..'-'..option..'-hp', (novo)..'/'..max)
     UI.setAttribute(string.lower(player.color)..'-'..option..'-percentage', 'percentage', (novo/max)*100)
-    updateTextUI(option, novo)
+    updateTextUI(option, novo, string.lower(player.color))
   end
 end
 
@@ -110,19 +111,29 @@ function hpUp(player, option, id)
   if novo <= max then
     UI.setValue(string.lower(player.color)..'-'..option..'-hp', (novo)..'/'..max)
     UI.setAttribute(string.lower(player.color)..'-'..option..'-percentage', 'percentage', (novo/max)*100)
-    updateTextUI(option, novo)
+    updateTextUI(option, novo, string.lower(player.color))
   end
 end
 
-function updateTextUI(id, option)
+function updateTextUI(id, option, color)
+  local player3D = getPlayer3D(color)
   if split(id,'-')[1] == 'm1' then
-    yellowM1HP.setValue(option..'');
+    player3D.m1.hp.setValue(option..'');
   end
   if split(id,'-')[1] == 'm2' then
-    yellowM2HP.setValue(option..'');
+    player3D.m2.hp.setValue(option..'');
   end
   if split(id,'-')[1] == 'm3' then
-    yellowM3HP.setValue(option..'');
+    player3D.m3.hp.setValue(option..'');
+  end
+end
+
+function getPlayer3D(color)
+  if color == 'yellow' then
+    return yellow3D
+  end
+  if color == 'green' then
+    return green3D
   end
 end
 
