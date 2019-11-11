@@ -1,4 +1,4 @@
-#include count
+#include ../ui/count
 
 function getDeck(deck)
   local val = 0

@@ -1,11 +1,11 @@
 draw = {}
 
-#include draw/orange
-#include draw/pink
-#include draw/yellow
-#include draw/green
-#include draw/blue
-#include draw/red
+#include ../draw/orange
+#include ../draw/pink
+#include ../draw/yellow
+#include ../draw/green
+#include ../draw/blue
+#include ../draw/red
 
 function drawBtn(obj, btn, func)
   local drawButton = {}

@@ -1,40 +1,40 @@
 spawn = {}
 
-#include decks
+#include ../misc/decks
 
-#include spawn/arrowhead
-#include spawn/centaur
-#include spawn/colorpandora
-#include spawn/dino
-#include spawn/dragon
+#include ../spawn/arrowhead
+#include ../spawn/centaur
+#include ../spawn/colorpandora
+#include ../spawn/dino
+#include ../spawn/dragon
 
-#include spawn/durahan
-#include spawn/gali
-#include spawn/ghost
-#include spawn/golem
-#include spawn/hare
+#include ../spawn/durahan
+#include ../spawn/gali
+#include ../spawn/ghost
+#include ../spawn/golem
+#include ../spawn/hare
 
-#include spawn/henger
-#include spawn/jell
-#include spawn/joker
-#include spawn/metalner
-#include spawn/mew
+#include ../spawn/henger
+#include ../spawn/jell
+#include ../spawn/joker
+#include ../spawn/metalner
+#include ../spawn/mew
 
-#include spawn/mocchi
-#include spawn/monol
-#include spawn/naga
-#include spawn/phoenix
-#include spawn/pixie
+#include ../spawn/mocchi
+#include ../spawn/monol
+#include ../spawn/naga
+#include ../spawn/phoenix
+#include ../spawn/pixie
 
-#include spawn/plant
-#include spawn/suezo
-#include spawn/tiger
-#include spawn/worm
-#include spawn/zilla
+#include ../spawn/plant
+#include ../spawn/suezo
+#include ../spawn/tiger
+#include ../spawn/worm
+#include ../spawn/zilla
 
-#include spawn/anymonster
-#include spawn/breeder
-#include spawn/mixed
+#include ../spawn/anymonster
+#include ../spawn/breeder
+#include ../spawn/mixed
 
 function monster(obj, coin, deck)
   local drawButton = {}

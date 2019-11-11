@@ -1,11 +1,13 @@
-#include MRBC_Lua/players
+--[[ Lua code. See documentation: https://api.tabletopsimulator.com/ --]]
+#include MRBC_Lua/misc/players
 
-#include MRBC_Lua/controller-spawn
-#include MRBC_Lua/controller-draw
-#include MRBC_Lua/controller-turn
-#include MRBC_Lua/controller-ui
-#include MRBC_Lua/players3D
+#include MRBC_Lua/controller/spawn
+#include MRBC_Lua/controller/draw
+#include MRBC_Lua/controller/turn
+#include MRBC_Lua/controller/ui
+#include MRBC_Lua/misc/text
 
+--[[ The onLoad event is called after the game save finishes loading. --]]
 function onLoad()
   local coinparams = {
     type      = 'Checker_black',
