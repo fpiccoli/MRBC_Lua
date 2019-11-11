@@ -1,0 +1,46 @@
+ui = {}
+
+function countGuts(color, player, player3D)
+  local guts = getDeck(getObjectFromGUID(player.apZoneGUID).getObjects()[1])
+  player3D.guts.setValue(guts..'')
+  UI.setValue(color..'-team-guts', guts)
+  UI.setValue(color..'-enemy-team-guts', guts)
+end
+
+function countDeck(color, player, player3D)
+  local deck = getDeck(getObjectFromGUID(player.deckZoneGUID).getObjects()[1])
+  UI.setAttribute(color..'-cards-percentage', 'percentage', (deck/50)*100)
+  UI.setValue(color..'-cards-value', deck..'/50')
+  UI.setAttribute(color..'-enemy-cards-percentage', 'percentage', (deck/50)*100)
+  UI.setValue(color..'-enemy-cards-value', deck..'/50')
+  player3D.deck.setValue(deck..'')
+end
+
+function countDiscards(color, player, player3D)
+  local discards = getDeck(getObjectFromGUID(player.discardsZoneGUID).getObjects()[1])
+  player3D.discards.setValue(discards..'')
+end
+
+function ui.deck(color, player, player3D)
+  countGuts(color, player, player3D)
+  countDeck(color, player, player3D)
+  countDiscards(color, player, player3D)
+end
+
+function ui.text(pos, rot, size, label)
+  if label == nil then
+    label = '0'
+  end
+
+  local params = {
+    type      = '3DText',
+    position  = pos,
+    rotation  = rot,
+  }
+  obj = spawnObject(params)
+  obj.setValue(label)
+  obj.TextTool.setFontColor({1,1,1})
+  obj.TextTool.setFontSize(size)
+  obj.setScale({1.5,1.5,1.5})
+  return obj
+end

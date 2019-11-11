@@ -1,12 +1,11 @@
---[[ Lua code. See documentation: https://api.tabletopsimulator.com/ --]]
 #include MRBC_Lua/players
 
 #include MRBC_Lua/controller-spawn
 #include MRBC_Lua/controller-draw
 #include MRBC_Lua/controller-turn
 #include MRBC_Lua/controller-ui
+#include MRBC_Lua/players3D
 
---[[ The onLoad event is called after the game save finishes loading. --]]
 function onLoad()
   local coinparams = {
     type      = 'Checker_black',
@@ -32,46 +31,19 @@ function onLoad()
   btn = spawnObject(btnparams)
   btn.setLock(true)
 
-  draw.orange(btn)
-  draw.pink(btn)
-  draw.yellow(btn)
-  draw.green(btn)
-  draw.blue(btn)
-  draw.red(btn)
-
-  turn.orange(btn)
-  turn.pink(btn)
-  turn.yellow(btn)
-  turn.green(btn)
-  turn.blue(btn)
-  turn.red(btn)
-
-  #include MRBC_Lua/ui/yellow
-
+  draw.orange(btn); turn.orange(btn);
+  draw.pink(btn); turn.pink(btn);
+  draw.yellow(btn); turn.yellow(btn);
+  draw.green(btn); turn.green(btn);
+  draw.blue(btn); turn.blue(btn);
+  draw.red(btn); turn.red(btn);
 end
 
 function onUpdate()
-  local gutsYellow = count.deck(getObjectFromGUID(yellow.apZoneGUID).getObjects()[1]) --//TODO dynamic GUID
-  yellow3D.guts.setValue(gutsYellow..'')
-  UI.setValue('yellow-team-guts', gutsYellow)
-
-  local deckYellow = count.deck(getObjectFromGUID(yellow.deckZoneGUID).getObjects()[1]) --//TODO dynamic GUID
-  UI.setAttribute('yellow-cards-percentage', 'percentage', (deckYellow/50)*100)
-  UI.setValue('yellow-cards-value', deckYellow..'/50')
-  yellow3D.deck.setValue(deckYellow..'')
-
-  local discardsYellow = count.deck(getObjectFromGUID(yellow.discardsZoneGUID).getObjects()[1]) --//TODO dynamic GUID
-  yellow3D.discards.setValue(discardsYellow..'')
-
-  local gutsGreen = count.deck(getObjectFromGUID(green.apZoneGUID).getObjects()[1]) --//TODO dynamic GUID
-  green3D.guts.setValue(gutsGreen..'')
-  UI.setValue('green-team-guts', gutsGreen)
-
-  local deckGreen = count.deck(getObjectFromGUID(green.deckZoneGUID).getObjects()[1]) --//TODO dynamic GUID
-  UI.setAttribute('green-cards-percentage', 'percentage', (deckGreen/50)*100)
-  UI.setValue('green-cards-value', deckGreen..'/50')
-  green3D.deck.setValue(deckGreen..'')
-
-  local discardsGreen = count.deck(getObjectFromGUID(green.discardsZoneGUID).getObjects()[1]) --//TODO dynamic GUID
-  green3D.discards.setValue(discardsGreen..'')
+  ui.deck('green', green, green3D);
+  ui.deck('yellow', yellow, yellow3D);
+  ui.deck('red', red, red3D);
+  ui.deck('blue', blue, blue3D);
+  ui.deck('orange', orange, orange3D);
+  ui.deck('pink', pink, pink3D);
 end

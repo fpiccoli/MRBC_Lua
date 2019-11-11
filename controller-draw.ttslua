@@ -64,5 +64,4 @@ end
 
 function drawOneCardByTime(deck)
   deck.cards.deal(1, deck.player.color)
-  count.deck(getObjectFromGUID(deck.player.deckZoneGUID).getObjects()[1])
 end
