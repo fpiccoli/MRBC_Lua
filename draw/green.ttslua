@@ -4,5 +4,5 @@ function draw.green(btn)
 end
 
 function greendraw(obj, color, alt)
-  drawCard(green, color, alt)
+  drawCard(green, color, alt, green3D)
 end

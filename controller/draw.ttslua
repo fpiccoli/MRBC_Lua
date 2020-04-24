@@ -22,7 +22,7 @@ function drawBtn(obj, btn, func)
   btn.createButton(drawButton)
 end
 
-function drawCard(obj, player, alt)
+function drawCard(obj, player, alt, obj3D)
   if obj.color ~= player then
     broadcastToColor('You\'re not the player ' .. obj.color .. '!', player, obj.playerRGB)
     return
@@ -59,6 +59,8 @@ function drawCard(obj, player, alt)
     delay          = 0.25,
     repetitions    = numberOfCards,
   })
+
+  ui.countDeck(obj.color, obj, obj3D, numberOfCards);
 
 end
 

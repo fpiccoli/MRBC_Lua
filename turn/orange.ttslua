@@ -4,5 +4,5 @@ function turn.orange(btn)
 end
 
 function orangeturn(obj, color, alt)
-  turnCard(orange, color, alt)
+  turnCard(orange, color, alt, orange3D)
 end

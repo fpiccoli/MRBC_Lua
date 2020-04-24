@@ -23,7 +23,7 @@ function turnBtn(obj, btn, func)
   btn.createButton(turnButton)
 end
 
-function turnCard(obj, player, alt)
+function turnCard(obj, player, alt, obj3D)
   if obj.color ~= player then
     broadcastToColor('You\'re not the player ' .. obj.color .. '!', player, obj.playerRGB)
     return
@@ -45,5 +45,7 @@ function turnCard(obj, player, alt)
     broadcastToColor(Player[obj.color].steam_name .. ' turned ' .. counter .. ' GUTS', obj.enemy, obj.enemyRGB)
   end
   broadcastToColor(Player[obj.color].steam_name .. ' turned ' .. counter .. ' GUTS', obj.color, obj.playerRGB)
+
+  ui.countGuts(obj.color, obj, obj3D, counter);
 
 end

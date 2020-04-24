@@ -4,5 +4,5 @@ function draw.orange(btn)
 end
 
 function orangedraw(obj, color, alt)
-  drawCard(orange, color, alt)
+  drawCard(orange, color, alt, orange3D)
 end

@@ -4,5 +4,5 @@ function draw.pink(btn)
 end
 
 function pinkdraw(obj, color, alt)
-  drawCard(pink, color, alt)
+  drawCard(pink, color, alt, pink3D)
 end

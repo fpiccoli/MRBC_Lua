@@ -4,5 +4,5 @@ function draw.blue(btn)
 end
 
 function bluedraw(obj, color, alt)
-  drawCard(blue, color, alt)
+  drawCard(blue, color, alt, blue3D)
 end

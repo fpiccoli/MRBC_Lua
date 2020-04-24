@@ -4,5 +4,5 @@ function turn.yellow(btn)
 end
 
 function yellowturn(obj, color, alt)
-  turnCard(yellow, color, alt)
+  turnCard(yellow, color, alt, yellow3D)
 end

@@ -4,5 +4,5 @@ function turn.pink(btn)
 end
 
 function pinkturn(obj, color, alt)
-  turnCard(pink, color, alt)
+  turnCard(pink, color, alt, pink3D)
 end

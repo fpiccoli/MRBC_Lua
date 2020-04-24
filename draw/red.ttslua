@@ -4,5 +4,5 @@ function draw.red(btn)
 end
 
 function reddraw(obj, color, alt)
-  drawCard(red, color, alt)
+  drawCard(red, color, alt, red3D)
 end

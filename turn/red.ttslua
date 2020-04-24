@@ -4,5 +4,5 @@ function turn.red(btn)
 end
 
 function redturn(obj, color, alt)
-  turnCard(red, color, alt)
+  turnCard(red, color, alt, red3D)
 end

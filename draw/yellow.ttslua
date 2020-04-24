@@ -4,5 +4,5 @@ function draw.yellow(btn)
 end
 
 function yellowdraw(obj, color, alt)
-  drawCard(yellow, color, alt)
+  drawCard(yellow, color, alt, yellow3D)
 end
