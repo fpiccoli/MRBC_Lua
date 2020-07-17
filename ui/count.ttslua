@@ -14,10 +14,10 @@ function ui.countDeck(color, player, player3D, cards)
   if deck < 0 then
     deck = 0
   end
-  UI.setAttribute(color..'-cards-percentage', 'percentage', (deck/50)*100)
-  UI.setValue(color..'-cards-value', deck..'/50')
-  UI.setAttribute(color..'-enemy-cards-percentage', 'percentage', (deck/50)*100)
-  UI.setValue(color..'-enemy-cards-value', deck..'/50')
+  UI.setAttribute(color..'-cards-percentage', 'percentage', (deck/60)*100)
+  UI.setValue(color..'-cards-value', deck..'/60')
+  UI.setAttribute(color..'-enemy-cards-percentage', 'percentage', (deck/60)*100)
+  UI.setValue(color..'-enemy-cards-value', deck..'/60')
   player3D.deck.setValue(deck..'')
 end
 

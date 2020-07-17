@@ -7,8 +7,8 @@
   <Text color="black" fontStyle="bold" fontSize="15"/>
 </Defaults>
 
-<Panel id="player-yellow" class="WindowBorder" width="260" height="420" offsetXY="0 -250" visibility="Yellow" rectAlignment="MiddleRight" showAnimation="Grow" hideAnimation="Shrink" returnToOriginalPositionWhenReleased="false" allowDragging="true" color="Yellow">
-  <TableLayout height="0" width="260" columnWidths="60 100 40 25 25" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 0">
+<Panel id="player-yellow" class="WindowBorder" width="280" height="420" offsetXY="0 -250" visibility="Yellow" rectAlignment="MiddleRight" showAnimation="Grow" hideAnimation="Shrink" returnToOriginalPositionWhenReleased="false" allowDragging="true" color="Yellow">
+  <TableLayout height="0" width="280" columnWidths="80 100 40 25 25" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 0">
     <Row preferredHeight="35">
     <Cell><Button onClick="toggleSet">Set</Button></Cell>
       <Cell><Text id="yellow-team-name">Your Team</Text></Cell>
@@ -38,10 +38,10 @@
     <Row preferredHeight="40">
       <Cell><Text>Deck</Text></Cell>
       <Cell><ProgressBar id="yellow-cards-percentage" percentage="0" fillImageColor="#003c00"></ProgressBar></Cell>
-      <Cell><Text id="yellow-cards-value">0/50</Text></Cell>
+      <Cell><Text id="yellow-cards-value">0/60</Text></Cell>
     </Row>
   </TableLayout>
-  <TableLayout height="0" width="260" columnWidths="60 140 50" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 210">
+  <TableLayout height="0" width="280" columnWidths="80 140 50" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 210">
     <Row preferredHeight="35">
       <Cell></Cell>
       <Cell><Text id="green-enemy-team-name">Enemy Team</Text></Cell>
@@ -65,7 +65,7 @@
     <Row preferredHeight="40">
       <Cell><Text>Deck</Text></Cell>
       <Cell><ProgressBar id="green-enemy-cards-percentage" percentage="0" fillImageColor="#610000"></ProgressBar></Cell>
-      <Cell><Text id="green-enemy-cards-value">0/50</Text></Cell>
+      <Cell><Text id="green-enemy-cards-value">0/60</Text></Cell>
     </Row>
   </TableLayout>
 </Panel>
@@ -74,7 +74,7 @@
     <Row preferredHeight="30">
       <Cell><Text>Max HP</Text></Cell>
       <Cell><Text>Color</Text></Cell>
-      <Cell><Text>Monster Name</Text></Cell>
+      <Cell><Text>Class Name</Text></Cell>
       <Cell>
         <Button onClick="toggleSet">x</Button>
       </Cell>
@@ -125,8 +125,8 @@
   </TableLayout>
 </Panel>
 
-<Panel id="player-green" class="WindowBorder" width="260" height="420" offsetXY="0 -250" visibility="Green" rectAlignment="MiddleRight" showAnimation="Grow" hideAnimation="Shrink" returnToOriginalPositionWhenReleased="false" allowDragging="true" color="Green">
-  <TableLayout height="0" width="260" columnWidths="60 100 40 25 25" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 0">
+<Panel id="player-green" class="WindowBorder" width="280" height="420" offsetXY="0 -250" visibility="Green" rectAlignment="MiddleRight" showAnimation="Grow" hideAnimation="Shrink" returnToOriginalPositionWhenReleased="false" allowDragging="true" color="Green">
+  <TableLayout height="0" width="280" columnWidths="80 100 40 25 25" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 0">
     <Row preferredHeight="35">
     <Cell><Button onClick="toggleSet">Set</Button></Cell>
       <Cell><Text id="green-team-name">Your Team</Text></Cell>
@@ -156,10 +156,10 @@
     <Row preferredHeight="40">
       <Cell><Text>Deck</Text></Cell>
       <Cell><ProgressBar id="green-cards-percentage" percentage="100" fillImageColor="#003c00"></ProgressBar></Cell>
-      <Cell><Text id="green-cards-value">0/50</Text></Cell>
+      <Cell><Text id="green-cards-value">0/60</Text></Cell>
     </Row>
   </TableLayout>
-  <TableLayout height="0" width="260" columnWidths="60 140 50" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 210">
+  <TableLayout height="0" width="280" columnWidths="80 140 50" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 210">
     <Row preferredHeight="35">
       <Cell></Cell>
       <Cell><Text id="yellow-enemy-team-name">Enemy Team</Text></Cell>
@@ -183,7 +183,7 @@
     <Row preferredHeight="40">
       <Cell><Text>Deck</Text></Cell>
       <Cell><ProgressBar id="yellow-enemy-cards-percentage" percentage="100" fillImageColor="#610000"></ProgressBar></Cell>
-      <Cell><Text id="yellow-enemy-cards-value">0/50</Text></Cell>
+      <Cell><Text id="yellow-enemy-cards-value">0/60</Text></Cell>
     </Row>
   </TableLayout>
 </Panel>
@@ -192,7 +192,7 @@
     <Row preferredHeight="30">
       <Cell><Text>Max HP</Text></Cell>
       <Cell><Text>Color</Text></Cell>
-      <Cell><Text>Monster Name</Text></Cell>
+      <Cell><Text>Class Name</Text></Cell>
       <Cell>
         <Button onClick="toggleSet">x</Button>
       </Cell>
@@ -243,8 +243,8 @@
   </TableLayout>
 </Panel>
 
-<Panel id="player-blue" class="WindowBorder" width="260" height="420" offsetXY="0 -250" visibility="Blue" rectAlignment="MiddleRight" showAnimation="Grow" hideAnimation="Shrink" returnToOriginalPositionWhenReleased="false" allowDragging="true" color="Blue">
-  <TableLayout height="0" width="260" columnWidths="60 100 40 25 25" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 0">
+<Panel id="player-blue" class="WindowBorder" width="280" height="420" offsetXY="0 -250" visibility="Blue" rectAlignment="MiddleRight" showAnimation="Grow" hideAnimation="Shrink" returnToOriginalPositionWhenReleased="false" allowDragging="true" color="Blue">
+  <TableLayout height="0" width="280" columnWidths="80 100 40 25 25" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 0">
     <Row preferredHeight="35">
     <Cell><Button onClick="toggleSet">Set</Button></Cell>
       <Cell><Text id="blue-team-name">Your Team</Text></Cell>
@@ -274,10 +274,10 @@
     <Row preferredHeight="40">
       <Cell><Text>Deck</Text></Cell>
       <Cell><ProgressBar id="blue-cards-percentage" percentage="0" fillImageColor="#003c00"></ProgressBar></Cell>
-      <Cell><Text id="blue-cards-value">0/50</Text></Cell>
+      <Cell><Text id="blue-cards-value">0/60</Text></Cell>
     </Row>
   </TableLayout>
-  <TableLayout height="0" width="260" columnWidths="60 140 50" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 210">
+  <TableLayout height="0" width="280" columnWidths="80 140 50" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 210">
     <Row preferredHeight="35">
       <Cell></Cell>
       <Cell><Text id="red-enemy-team-name">Enemy Team</Text></Cell>
@@ -301,7 +301,7 @@
     <Row preferredHeight="40">
       <Cell><Text>Deck</Text></Cell>
       <Cell><ProgressBar id="red-enemy-cards-percentage" percentage="0" fillImageColor="#610000"></ProgressBar></Cell>
-      <Cell><Text id="red-enemy-cards-value">0/50</Text></Cell>
+      <Cell><Text id="red-enemy-cards-value">0/60</Text></Cell>
     </Row>
   </TableLayout>
 </Panel>
@@ -310,7 +310,7 @@
     <Row preferredHeight="30">
       <Cell><Text>Max HP</Text></Cell>
       <Cell><Text>Color</Text></Cell>
-      <Cell><Text>Monster Name</Text></Cell>
+      <Cell><Text>Class Name</Text></Cell>
       <Cell>
         <Button onClick="toggleSet">x</Button>
       </Cell>
@@ -361,8 +361,8 @@
   </TableLayout>
 </Panel>
 
-<Panel id="player-red" class="WindowBorder" width="260" height="420" offsetXY="0 -250" visibility="Red" rectAlignment="MiddleRight" showAnimation="Grow" hideAnimation="Shrink" returnToOriginalPositionWhenReleased="false" allowDragging="true" color="Red">
-  <TableLayout height="0" width="260" columnWidths="60 100 40 25 25" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 0">
+<Panel id="player-red" class="WindowBorder" width="280" height="420" offsetXY="0 -250" visibility="Red" rectAlignment="MiddleRight" showAnimation="Grow" hideAnimation="Shrink" returnToOriginalPositionWhenReleased="false" allowDragging="true" color="Red">
+  <TableLayout height="0" width="280" columnWidths="80 100 40 25 25" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 0">
     <Row preferredHeight="35">
     <Cell><Button onClick="toggleSet">Set</Button></Cell>
       <Cell><Text id="red-team-name">Your Team</Text></Cell>
@@ -392,10 +392,10 @@
     <Row preferredHeight="40">
       <Cell><Text>Deck</Text></Cell>
       <Cell><ProgressBar id="red-cards-percentage" percentage="100" fillImageColor="#003c00"></ProgressBar></Cell>
-      <Cell><Text id="red-cards-value">0/50</Text></Cell>
+      <Cell><Text id="red-cards-value">0/60</Text></Cell>
     </Row>
   </TableLayout>
-  <TableLayout height="0" width="260" columnWidths="60 140 50" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 210">
+  <TableLayout height="0" width="280" columnWidths="80 140 50" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 210">
     <Row preferredHeight="35">
       <Cell></Cell>
       <Cell><Text id="blue-enemy-team-name">Enemy Team</Text></Cell>
@@ -419,7 +419,7 @@
     <Row preferredHeight="40">
       <Cell><Text>Deck</Text></Cell>
       <Cell><ProgressBar id="blue-enemy-cards-percentage" percentage="100" fillImageColor="#610000"></ProgressBar></Cell>
-      <Cell><Text id="blue-enemy-cards-value">0/50</Text></Cell>
+      <Cell><Text id="blue-enemy-cards-value">0/60</Text></Cell>
     </Row>
   </TableLayout>
 </Panel>
@@ -428,7 +428,7 @@
     <Row preferredHeight="30">
       <Cell><Text>Max HP</Text></Cell>
       <Cell><Text>Color</Text></Cell>
-      <Cell><Text>Monster Name</Text></Cell>
+      <Cell><Text>Class Name</Text></Cell>
       <Cell>
         <Button onClick="toggleSet">x</Button>
       </Cell>
@@ -479,8 +479,8 @@
   </TableLayout>
 </Panel>
 
-<Panel id="player-orange" class="WindowBorder" width="260" height="420" offsetXY="0 -250" visibility="Orange" rectAlignment="MiddleRight" showAnimation="Grow" hideAnimation="Shrink" returnToOriginalPositionWhenReleased="false" allowDragging="true" color="Orange">
-  <TableLayout height="0" width="260" columnWidths="60 100 40 25 25" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 0">
+<Panel id="player-orange" class="WindowBorder" width="280" height="420" offsetXY="0 -250" visibility="Orange" rectAlignment="MiddleRight" showAnimation="Grow" hideAnimation="Shrink" returnToOriginalPositionWhenReleased="false" allowDragging="true" color="Orange">
+  <TableLayout height="0" width="280" columnWidths="80 100 40 25 25" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 0">
     <Row preferredHeight="35">
     <Cell><Button onClick="toggleSet">Set</Button></Cell>
       <Cell><Text id="orange-team-name">Your Team</Text></Cell>
@@ -510,10 +510,10 @@
     <Row preferredHeight="40">
       <Cell><Text>Deck</Text></Cell>
       <Cell><ProgressBar id="orange-cards-percentage" percentage="0" fillImageColor="#003c00"></ProgressBar></Cell>
-      <Cell><Text id="orange-cards-value">0/50</Text></Cell>
+      <Cell><Text id="orange-cards-value">0/60</Text></Cell>
     </Row>
   </TableLayout>
-  <TableLayout height="0" width="260" columnWidths="60 140 50" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 210">
+  <TableLayout height="0" width="280" columnWidths="80 140 50" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 210">
     <Row preferredHeight="35">
       <Cell></Cell>
       <Cell><Text id="pink-enemy-team-name">Enemy Team</Text></Cell>
@@ -537,7 +537,7 @@
     <Row preferredHeight="40">
       <Cell><Text>Deck</Text></Cell>
       <Cell><ProgressBar id="pink-enemy-cards-percentage" percentage="0" fillImageColor="#610000"></ProgressBar></Cell>
-      <Cell><Text id="pink-enemy-cards-value">0/50</Text></Cell>
+      <Cell><Text id="pink-enemy-cards-value">0/60</Text></Cell>
     </Row>
   </TableLayout>
 </Panel>
@@ -546,7 +546,7 @@
     <Row preferredHeight="30">
       <Cell><Text>Max HP</Text></Cell>
       <Cell><Text>Color</Text></Cell>
-      <Cell><Text>Monster Name</Text></Cell>
+      <Cell><Text>Class Name</Text></Cell>
       <Cell>
         <Button onClick="toggleSet">x</Button>
       </Cell>
@@ -597,8 +597,8 @@
   </TableLayout>
 </Panel>
 
-<Panel id="player-pink" class="WindowBorder" width="260" height="420" offsetXY="0 -250" visibility="Pink" rectAlignment="MiddleRight" showAnimation="Grow" hideAnimation="Shrink" returnToOriginalPositionWhenReleased="false" allowDragging="true" color="Pink">
-  <TableLayout height="0" width="260" columnWidths="60 100 40 25 25" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 0">
+<Panel id="player-pink" class="WindowBorder" width="280" height="420" offsetXY="0 -250" visibility="Pink" rectAlignment="MiddleRight" showAnimation="Grow" hideAnimation="Shrink" returnToOriginalPositionWhenReleased="false" allowDragging="true" color="Pink">
+  <TableLayout height="0" width="280" columnWidths="80 100 40 25 25" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 0">
     <Row preferredHeight="35">
     <Cell><Button onClick="toggleSet">Set</Button></Cell>
       <Cell><Text id="pink-team-name">Your Team</Text></Cell>
@@ -628,10 +628,10 @@
     <Row preferredHeight="40">
       <Cell><Text>Deck</Text></Cell>
       <Cell><ProgressBar id="pink-cards-percentage" percentage="100" fillImageColor="#003c00"></ProgressBar></Cell>
-      <Cell><Text id="pink-cards-value">0/50</Text></Cell>
+      <Cell><Text id="pink-cards-value">0/60</Text></Cell>
     </Row>
   </TableLayout>
-  <TableLayout height="0" width="260" columnWidths="60 140 50" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 210">
+  <TableLayout height="0" width="280" columnWidths="80 140 50" rectAlignment="MiddleRight" allowDragging="true" returnToOriginalPositionWhenReleased="false" offsetXY="5 210">
     <Row preferredHeight="35">
       <Cell></Cell>
       <Cell><Text id="orange-enemy-team-name">Enemy Team</Text></Cell>
@@ -655,7 +655,7 @@
     <Row preferredHeight="40">
       <Cell><Text>Deck</Text></Cell>
       <Cell><ProgressBar id="orange-enemy-cards-percentage" percentage="100" fillImageColor="#610000"></ProgressBar></Cell>
-      <Cell><Text id="orange-enemy-cards-value">0/50</Text></Cell>
+      <Cell><Text id="orange-enemy-cards-value">0/60</Text></Cell>
     </Row>
   </TableLayout>
 </Panel>
@@ -664,7 +664,7 @@
     <Row preferredHeight="30">
       <Cell><Text>Max HP</Text></Cell>
       <Cell><Text>Color</Text></Cell>
-      <Cell><Text>Monster Name</Text></Cell>
+      <Cell><Text>Class Name</Text></Cell>
       <Cell>
         <Button onClick="toggleSet">x</Button>
       </Cell>

@@ -47,7 +47,7 @@ function drawCard(obj, player, alt, obj3D)
     return
   end
 
-  local numberOfCards = 5 - counter
+  local numberOfCards = 6 - counter
 
   broadcastToAll(Player[obj.color].steam_name .. ' drew ' .. numberOfCards .. ' card(s).', obj.playerRGB)
 
